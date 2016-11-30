@@ -54,6 +54,7 @@ $comRec = $pdo->query($comQuery);
 			<p><?php echo $comRow["comDate"]; ?></p>
 			<p>memAccount</p>
 			<p>LastReply</p>
+			<p>哈囉你好媽中心敢謝</p>
 		</div>
 		<?php } ?>
 	</div>
