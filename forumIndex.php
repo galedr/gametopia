@@ -28,7 +28,7 @@
 			<input type="hidden" name="platform" value="PS4">
 		</form>
 		<form action="forum.php" id="f-xbox">
-			<input type="hidden" name="platform" value="XBOOX">
+			<input type="hidden" name="platform" value="XBOX">
 		</form>
 		<form action="forum.php" id="f-wii">
 			<input type="hidden" name="platform" value="Wii">
@@ -38,9 +38,6 @@
 		</form>
 		<form action="forum.php" id="f-handheld">
 			<input type="hidden" name="platform" value="3DS">
-		</form>
-		<form action="forum.php" id="f-mobile">
-			<input type="hidden" name="platform" value="mobile">
 		</form>
 	</div>
 	
@@ -53,8 +50,7 @@
 		<img class="consoleImg" src="images/ps4.png">
 		<div class="btnsBox">
 			<button class="optionBar ps default" id="default" form="f-ps"><img class="btnicons" src="images/ps.png" alt="">Playstation</button>
-			<button class="optionBar handheld" form="f-handheld"><img class="btnicons" src="images/han.png" alt="">Handheld</button>
-			<!-- <button class="optionBar mobile" form="f-mobile"><img class="btnicons" src="images/phone.png" alt="">Mobile</button> -->
+			<button class="optionBar handheld" form="f-handheld"><img class="btnicons" src="images/han.png" alt="">3DS</button>
 			<button class="optionBar xbox" form="f-xbox"><img class="btnicons" src="images/xbox.png" alt="">XBOX</button>
 			<button class="optionBar wii" form="f-wii"><img class="btnicons" src="images/wii-u-logo.png" alt=""> Wii</button>
 			<button class="optionBar pc" form="f-pc"><img class="btnicons" src="images/computer.png" alt="">PC</button>

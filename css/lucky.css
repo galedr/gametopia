@@ -1,0 +1,142 @@
+*{
+	padding: 0;
+	margin:0;
+}
+
+.mobile_div{
+	width: 100%;
+	height: 100vh;
+	overflow: hidden;
+	position: relative;
+}
+
+.mobile_begin{
+	background-size:cover;
+	background-position: center;
+	background-image: url('../images/town1.jpg'); 
+}
+
+.m-layer-border-box{
+	background-color:rgba(255,255,255,.2); 
+	z-index: 10;
+	border:1px solid #CCC;
+	font-size: 2rem;
+	box-sizing: border-box;
+	text-align: center;
+	line-height: 35px;
+	letter-spacing:3px; 
+	padding-top:70px; 
+	height: 300px;
+	width: 300px;
+	color:#eee;
+	position: absolute;
+	text-shadow: 0px 0px 3px rgba(0,0,0,.8);
+	margin: auto;
+	top: 20%;
+	left: 10%;
+	
+}
+
+.m-layer-border-box-mask{
+	position: absolute;top: 0;left: 0;
+	height: 100%;
+	width: 100%;
+	background-color: rgba(0,0,0,.2);
+}
+
+.m-layer-border-box p:first-child{
+	background-color:rgba(0, 85, 85, .2);
+	font-size:1.5rem;
+	color: #fff;
+	font-weight: 300;
+	letter-spacing: 3px; 
+	margin: 10px 0;
+}
+
+.m-layer-border-box p+p{
+	position: relative;
+	font-weight:500;
+	z-index: 100;
+}
+
+.m-layer-border-box p:last-child{
+	padding-top:70px;
+	text-align: center;
+	bottom: 10px;
+	color: #fff;
+	font-size: 1.125rem;
+	font-weight:300;
+	position: relative;
+	z-index: 300;
+}
+
+.m-layer-border-box:before{
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 0;
+	height: 0;
+	border-bottom:300px solid rgba(91, 193, 230, 0.1);
+	border-right:300px solid transparent;
+}
+
+
+
+.megami{
+	position: absolute;
+	margin:0 auto; 
+	top: 10%;
+	height: 100%;
+	width:60%;
+	right: 0;
+	left: 0;
+	object-fit:cover;
+	object-position: center;
+
+}
+
+.slogan{
+	font-size: 10rem;
+	font-weight: 900;
+	color: rgba(255,255,255,.6);
+	opacity:.3;
+	text-shadow: 0px 0px 7px rgba(0,0,100,.8);
+	line-height:10rem; 
+	position: absolute;
+	letter-spacing: 1rem;
+	top: 20%;
+	right: 10%;
+	/*outline: 1px solid red;*/
+	/*display: none;*/
+}
+.slogan span{
+	display: block;
+}
+
+
+@media screen and (max-width:767px){
+    .slogan{display: none;}
+    .megami{display: none;}
+    .m-layer-border-box{left: 0;right: 0;top: 0; bottom: 0;}
+}
+
+
+/*平板直*/
+@media screen and (min-width: 768px){
+ 
+}
+
+/*平板橫*/
+@media screen and (min-width: 992px){
+ 	
+    
+
+}
+
+/*桌機*/
+@media screen and (min-width:1200px){
+ 	
+ 
+    
+}

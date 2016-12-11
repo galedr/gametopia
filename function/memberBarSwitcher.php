@@ -38,7 +38,7 @@ if(!isset($_SESSION["GTopiaAccount"]) || !isset($_SESSION["GTopiaMemLevel"])){
 		$('#signup').click(function(){
 			
 			$('#signup').unbind('click', false);
-			$('#bs-lightbox2').css('height','730px').css('padding-top','20px').css('z-index',999);
+			$('#bs-lightbox2').css('height','650px').css('padding-top','20px').css('z-index',999);
 			$('.mask').show();
 			$('#login').bind('click', false);
 
@@ -73,7 +73,7 @@ if(!isset($_SESSION["GTopiaAccount"]) || !isset($_SESSION["GTopiaMemLevel"])){
 
 		$('#trans-to-signup').click(function(){
 			$('#bs-lightbox1').hide();
-			$('#bs-lightbox2').css('height','730px').css('padding-top','20px').css('z-index',999).show();
+			$('#bs-lightbox2').css('height','650px').css('padding-top','20px').css('z-index',999).show();
 			$('.mask').show();
 		});
 
@@ -101,15 +101,12 @@ if(!isset($_SESSION["GTopiaAccount"]) || !isset($_SESSION["GTopiaMemLevel"])){
         	preview(this);
     	})
 
-    	// $("body").on("change", ".myFile", function (){
-     //    	$('#bs-lightbox2').css('height','95vh');
-    	// })
-
+ 
 
     	// ＝＝＝＝＝＝＝＝＝＝＝＝改變fileinput樣式＝＝＝＝＝＝＝＝＝＝＝＝＝＝
-    	document.getElementById("uploadBtn").onchange = function () {
-		    document.getElementById("uploadFile").value = this.value;
-		};	
+  //   	document.getElementById("uploadBtn").onchange = function () {
+		//     document.getElementById("uploadFile").value = this.value;
+		// };	
 
 // ======================= 表單驗證====================================
 		//登入驗證
@@ -206,10 +203,9 @@ if(!isset($_SESSION["GTopiaAccount"]) || !isset($_SESSION["GTopiaMemLevel"])){
 
 	
 	</script>	
-<?php 
-	//購物車數量
-	$cartNum = count($_SESSION['cart']);
-?>
+
+
+
 <div class="desk-bs">
 	<div class="bs-member-zone">
 		
@@ -219,8 +215,9 @@ if(!isset($_SESSION["GTopiaAccount"]) || !isset($_SESSION["GTopiaMemLevel"])){
 
 			<a id="signup" href="#">註冊</a>
 		</div>
+		<?php $cartNum = count($_SESSION['cart']); ?>
 		<div class="bs-member" id="cart">
-			<img src="images/1477771908_shopping-cart.png">
+			<img src="images/1477771908_shopping-cart.png" id="cart_desk_img" onclick="location.href='cartSessionList.php'">
 			<a id="cart" href="cartSessionList.php">(<?php echo $cartNum; ?>)</a>	
 		</div>
 
@@ -318,7 +315,7 @@ if(!isset($_SESSION["GTopiaAccount"]) || !isset($_SESSION["GTopiaMemLevel"])){
         						<img class="preview" src="images/1472926249_user.png">
         					</div>	
 
-        					<input id="uploadFile" placeholder="Choose File" disabled="disabled" />
+        					<!--<input id="uploadFile" placeholder="Choose File" disabled="disabled" />--> 
         					<div class="fileUpload btn btn-primary">
 							    <span>選擇檔案</span>
 							    <input id="uploadBtn" type="file" class="myFile" name="memImg">
@@ -437,11 +434,11 @@ if(isset($_SESSION["GTopiaAccount"]) && ($_SESSION["GTopiaMemLevel"]) == "member
 			<a href="<?php echo $_SERVER["PHP_SELF"]; ?>?logout=true	">登出</a>
 		</div>
 		<div class="bs-lo-member" id="cart">
-			<img src="images/1477771908_shopping-cart.png">
+			<img src="images/1477771908_shopping-cart.png" id="cart_login_btn" onclick="location.href='cartSessionList.php'">
 			<a href="cartSessionList.php">(<?php echo $cartNum; ?>)結帳</a>	
 		</div>
 		<div class="bs-lo-member" id="letter">
-			<img src="images/1477771936_Mail.png">
+			<img src="images/1477771936_Mail.png" id="mail_login_btn" onclick="location.href='mail_1.php'">
 			<a href="mail_1.php">(<?php echo $unreadNum; ?>)</a>	
 		</div>
 	</div>

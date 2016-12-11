@@ -29,6 +29,9 @@ $clickRec = $pdo->query($clickQuery);
 	<link rel="stylesheet" type="text/css" href="css/nav.css">
 	<link rel="stylesheet" type="text/css" href="css/footer.css">
 	<link rel="stylesheet" type="text/css" href="css/header.css">
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+
+	<script src="js/tagName.js"></script>
 	<script src="js/jquery-3.1.1.min.js"></script>
 
 </head>
@@ -162,8 +165,8 @@ $clickRec = $pdo->query($clickQuery);
 							
 							<h5 class="recommendGameName"><?php echo $proComRow["proName"]; ?></h5>
 							<div class="tag<?php echo $proComRow["proSeries"]; ?> recommendGameSeries"><?php echo $proComRow["proSeries"]; ?></div>
-							<div class="tag recommendGameClass"><?php echo $proComRow["proClass"]; ?></div>
-							<div class="recommendGamePrice">NTD$<?php echo $proComRow["proPrice"]; ?></div>
+							<div class="recommendGameClass"><i class="catTarget"></i><?php echo $proComRow["proClass"]; ?></div>
+							<div class="recommendGamePrice">NT$<?php echo $proComRow["proPrice"]; ?></div>
 					</div>
 					<?php } ?>		
 				</div>

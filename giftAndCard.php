@@ -22,6 +22,8 @@ session_start();
 	<link rel="stylesheet" type="text/css" href="css/giftAndCard.css">
   <link rel="stylesheet" type="text/css" href="js/giftAndCard.js">
 	<link rel="stylesheet" type="text/css" href="css/jquery.fullPage.css" />
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+  <script src="js/tagName.js"></script>
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
   <script src="js/jquery-3.1.0.min.js"></script>
 	<script type="text/javascript" src="js/jquery.fullPage.js"></script>
@@ -171,23 +173,6 @@ session_start();
   });
  </script>
 
- <script type="text/javascript">
-
-    // function hoverChangeRole(){
-    //   document.getElementById("original").src = "images/male_original.png";
-    // }
-
-    // function hoverFinished(){
-    //   document.getElementById("original").src = "images/empty.png";
-    // }
- // document.getElementById("male").addEventListener("mouseover" , hoverChangeRole)
- // document.getElementById("male").addEventListener("mouseout" , hoverFinished)
- //   function hoverChangeRole(){
- //      document.getElementById("original").src = "i"
- //   }
-
- </script>
-
 </head>
 <body>
 
@@ -199,19 +184,14 @@ session_start();
 ?>
 <script src="js/jquery-3.1.0.min.js"></script>
 <script type="text/javascript" src="js/jquery.fullPage.js"></script>
+<script src="js/tagName.js"></script>
 
 <!--=======================導覽列按鈕=====================-->
 <ul id="menu">  
   <li data-menuanchor="firstPage" id="option1">
-    <!-- <span>
-      <a href="#firstPage"></a>
-    </span> -->
     <a href="#firstPage" class="next"><span><img id="option1Icon" src="images/question-speech-bubble.png"></span>送禮說明</a>
   </li>
   <li data-menuanchor="secondPage" id="option2">
-   <!--  <span>
-      <a href="#secondPage"><img id="option2Icon" src="images/gender-symbols.png"></a>
-    </span>     -->
     <a href="#secondPage" class="next"><span><img id="option2Icon" src="images/gender-symbols.png"></span>對象性別</a>
   </li>
   <li data-menuanchor="3rdPage" id="option3">
@@ -231,9 +211,10 @@ session_start();
 	<div class="section" id="section0" name="section0"> 
 
       <div class="page_container" id="page_container0">
+        <div class="page1Content">
 		    <div class="page1Text">
   	  		<p>還在煩惱要送什麼禮物給朋友嗎？</p>
-  	  		<p>烏托邦協助你依量身需求送禮喔！</p>
+  	  		<p>烏托邦協助您依量身需求送禮喔！</p>
   	  	</div>
   	  	<div class="explanation">
   	  		<div class="explanationInside">
@@ -279,10 +260,12 @@ session_start();
 	        	</div>
         	</div>                  
   	  	</div>
+
   	  	<div class="giveGift">
   	  		<a href="#secondPage"><div class="btnMain" id="startForm">開始送禮</div></a>
   	  	</div>
   	  </div>
+      </div>
 	</div>
 	<div class="section" id="section1" name="section1">
 		
@@ -434,8 +417,8 @@ session_start();
 	                		<div class="style style2" id="style2" onclick="changeCardStyle('style2')"><img src="images/green.png"></div>
 	                		<div class="style style3" id="style3" onclick="changeCardStyle('style3')"><img src="images/orange.png"></div>
 	                		<div class="style style4" id="style4" onclick="changeCardStyle('style4')"><img src="images/pink.png"></div>
-		                    <div class="style style5" id="style5" onclick="changeCardStyle('style5')"><img src="images/purple.png"></div>
-		                    <div class="style style6" id="style6" onclick="changeCardStyle('style6')"><img src="images/white.png"></div>
+	                    <div class="style style5" id="style5" onclick="changeCardStyle('style5')"><img src="images/purple.png"></div>
+	                    <div class="style style6" id="style6" onclick="changeCardStyle('style6')"><img src="images/white.png"></div>
 	                	</div>
 	                </div>                
 	                <div class="cardDeco">                	
@@ -467,8 +450,8 @@ session_start();
               <div class="singleProBox">
                 <img src="images/witcher3.jpg">                
                 <h5>巫師3:狂獵</h5>
-                <div class="tag">PS4</div>
-                <div class="tag">動作</div>
+                <div class="tagName">PS4</div>
+                <div class="catName"><i class="catTarget"></i>動作驚險</div>
                 <p class="price">NT$878</p>
               </div>
             </div>
@@ -477,8 +460,8 @@ session_start();
               <div class="singleProBox">
                 <img src="images/Warframe.jpg">                
                 <h5>戰甲神兵</h5>
-                <div class="tag">XBOX</div>
-                <div class="tag">射擊</div>
+                <div class="tagName">XBOX</div>
+                <div class="catName"><i class="catTarget"></i>即時射擊</div>
                 <p class="price">NT$878</p>
               </div>
             </div>
@@ -487,8 +470,8 @@ session_start();
               <div class="singleProBox">
                 <img src="images/Mafia3.jpg">                
                 <h5>四海兄弟3</h5>
-                <div class="tag">PC</div>
-                <div class="tag">角色扮演</div>
+                <div class="tagName">PC</div>
+                <div class="catName"><i class="catTarget"></i>角色扮演</div>
                 <p class="price">NT$878</p>
               </div>
             </div>
@@ -497,70 +480,21 @@ session_start();
               <div class="singleProBox">
                 <img src="images/Mafia3.jpg">                
                 <h5>四海兄弟3</h5>
-                <div class="tag">PC</div>
-                <div class="tag">角色扮演</div>
-                <p class="price">NT$878</p>
-              </div>
-            </div><!-- 
-
-            <div class="singlePro singleProForMobile">
-              <div class="singleProBox">
-                <img src="images/Mafia3.jpg">                
-                <h5>四海兄弟3</h5>
-                <div class="tag">PC</div>
-                <div class="tag">角色扮演</div>
+                <div class="tagName">PC</div>
+                <div class="catName"><i class="catTarget"></i>角色扮演</div>
                 <p class="price">NT$878</p>
               </div>
             </div>
-
-            <div class="singlePro singleProForMobile">
-              <div class="singleProBox">
-                <img src="images/Mafia3.jpg">                
-                <h5>四海兄弟3</h5>
-                <div class="tag">PC</div>
-                <div class="tag">角色扮演</div>
-                <p class="price">NT$878</p>
-              </div>
-            </div> -->
-
-            <!-- <div class="singlePro singleProForMobile">
-              <div class="singleProBox">
-                <img src="images/Mafia3.jpg">                
-                <h5>四海兄弟3</h5>
-                <div class="tag">PC</div>
-                <div class="tag">角色扮演</div>
-                <p class="price">NT$878</p>
-              </div>
-            </div>
-
-            <div class="singlePro singleProForMobile">
-              <div class="singleProBox">
-                <img src="images/Mafia3.jpg">                
-                <h5>四海兄弟3</h5>
-                <div class="tag">PC</div>
-                <div class="tag">角色扮演</div>
-                <p class="price">NT$878</p>
-              </div>
-            </div> -->
 
           </div>
 
         </div>
 	    	<div class="proMore">
-	    		<a href=""><div class="btnMain">更多商品</div></a>
+	    		<a href="products.php"><div class="btnMain">更多商品</div></a>
 	    	</div>           
 	    </div>
 	</div>
 </div>
-
-<!-- <div id="snowflakeContainer">
-    <p class="snowflake">*</p>
-</div> -->
-  <?php 
-
-  // include("function/footer.php");
-
-  ?>  
 </body>  
 </html>
 <script>

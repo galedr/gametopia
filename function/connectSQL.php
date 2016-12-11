@@ -1,8 +1,8 @@
 <?php
 	//for localhost
-	$dsn = "mysql:host=localhost;port=3306;dbname=gametopia;charset=utf8";
-	$user = "root";
-	$password = "0916177495";
+	$dsn = "mysql:host=localhost;port=3306;dbname=ad103g2;charset=utf8";
+	$user = "ad103g2";
+	$password = "ad103g2";
 
 	$pdo = new PDO($dsn,$user,$password);
 

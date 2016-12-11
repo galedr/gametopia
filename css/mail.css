@@ -56,14 +56,6 @@ body{
 		margin-top: 0;
 	}
 }
-@media all and (max-width: 991px){
-/*	.right{
-		height: calc(100% - 70px);
-	}*/
-	/*.left{
-		height: calc(100% - 70px);
-	}*/
-}
 .top{
 	font-size: 0;
 	position: relative;
@@ -201,24 +193,7 @@ body{
 	position: absolute;
 	top: 0;left: 0;
 }
-/*.footer li{
-	display:inline-block;
-	box-sizing: border-box;
-	min-width: 25%;
-	min-height: 60px;
-	font-size: 16px;
-	text-align: center;
-	padding-top: 20px;
-}
-.footer li a{
-	text-decoration: none;
-	letter-spacing: 1px;
-	font-size: 1rem;
-	color: #888;
-}
-.right .top li{
-	min-width: 18%;
-}*/
+
 .right .mailInfoList{
 	height: calc(100% - 60px);
 	overflow: hidden;
@@ -270,10 +245,11 @@ body{
 .right .mailInfo .headImg img{
 	position: absolute;
 	width: 50%;
-	left: 0;top: 0;right: 0;bottom: 0;
-	margin: auto;
-	/*object-fit: cover;
-	object-position: center;*/
+	top: 0;
+	left: 0;right: 0;
+	margin: 0 auto;
+	object-fit: cover;
+	object-position: center;
 	border-radius: 20px;
 }
 .right .info .sender, .right .info .title, .right .info .content{
@@ -487,127 +463,6 @@ label{cursor: pointer;}
 	background-color: rgba(204, 235, 236, .5);
 }
 
-/*==============mobile===================*/
-/*.mail_title{
-	display: block;
-	color:#fff;
-	font-weight: 400;
-	text-align: center;
-	margin: 0 auto;
-	letter-spacing:5px;
-	background-color:rgba(0,146,144,0.4980392156862745); 
-	padding:10px 0;   
-}
-
-.oneML{
-	margin:10px 0;
-	padding: 8px 0 10px 0;
-	text-align: center;
-	font-size:0;
-	border-bottom:1px solid #ccc; 
-}
-
-.personalImage,.personalBlock{
-	display: inline-block;
-	vertical-align: top;
-	font-size: 1rem;
-	color: #333;
-}
-
-.personalImage{
-	width: 25%;
-	box-sizing: border-box;
-	padding: 10px 0;
-
-}
-
-.personalBlock{
-	width: 70%;
-
-}
-
-.personalName{
-	
-	text-align: left; 
-	padding:30px 10px;
-	font-size: 1.25rem; 
-	letter-spacing: 1px;
-}
-
-.personalMessage{
-	text-align: left; 
-	padding:10px 10px;
-	
-}
-
-.limitImage{
-	margin: 0 auto;
-	border-radius:50%;
-	height: 0px;
-	padding-top:100px; 
-	width: 100px;
-	position: relative; 
-	overflow: hidden;
-}
-.limitImage img{
-	position: absolute;
-	top: 0;
-	right: 0;
-	width: 100%;
-	height: auto;
-}
-
-.chat{
-	background-color:green; 
-}
-
-.oneMessageBetweenEachOther{
-	background-color:pink;
-	margin: 10px 0; 
-}
-
-#returnFromChatToAllMailList{
-	color:#fff;
-	font-size: 2rem;
-	display: block;
-	padding-top:10px; 
-	margin:10px;
-	width: 30px;  
-}
-
-.wrightMessage span{
-	color: #fff;
-	letter-spacing: 2px;
-	font-size:1.25rem;
-	display: block;
-	padding-left:10px; 
-}
-
-.text_write_father{
-	padding:15px 30px; 
-}
-
-.text_write{
-	background-color:#fff;
-	height:20px;
-	padding:0 30px;  
-}
-
-.message_submit_btn{
-	float: right;
-	border-radius: 5px;
-	width: 70px;
-	height: 30px;
-	font-size: 1rem;
-	line-height: 30px;
-	letter-spacing: 2px;
-	text-align: center;
-	background-color: rgba(0,200,200,.6);
-}
-
-.clearfix{
-	clear: both;
-}*/
 /*===================rwd=====================*/
 @media screen and (max-width: 767px){
 	  .personalImage{width: 22%;}
@@ -652,4 +507,28 @@ label{cursor: pointer;}
 	.outBox{width:1170px;}
 	#back_btn{display: none;}
  	.outBox2{display:none;}
-}	
+}
+
+#R2, #writeNewMessageOnCellPhone {display: none;}
+#writeNewMessageOnCellPhone {
+	margin: 0 9% 4% 30px;
+	width: 40px;
+	height: auto;
+	cursor: pointer;
+}
+@media all and (max-width: 991px) {
+	#R2 {
+		display: none;
+	}
+	#writeNewMessageOnCellPhone {
+		display: block;
+	}
+}
+@media all and (min-width: 992px) {
+	#R2 {
+		display: block;
+	}
+	#writeNewMessageOnCellPhone {
+		display: none;
+	}
+}

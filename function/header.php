@@ -51,6 +51,21 @@
 			
 			}
 		);
+
+		$('.sh-pin').hover(function(){
+			$('#sh-icon').attr('src','images/bag-2.png');
+		},function(){
+			$('#sh-icon').attr('src','images/bag.png');
+			
+			}
+		);
+		$('.fo-pin').hover(function(){
+			$('#fo-icon').attr('src','images/chat-2.png');
+		},function(){
+			$('#fo-icon').attr('src','images/chat.png');
+			
+			}
+		);
 	
 	});
 	</script>	
@@ -107,12 +122,11 @@
 						<a href="forumIndex.php">討論區</a>
 						<span class="zone-pin fo-pin"></span>
 						<ul>
-							<li><a href="">PS</a></li>
-							<li><a href="">XBOX</a></li>
-							<li><a href="">掌機</a></li>
-							<li><a href="">wii</a></li>
-							<li><a href="">pc</a></li>
-							<li><a href="">手遊</a></li>
+							<li><a href="forum.php?platform=PS4">PS</a></li>
+							<li><a href="forum.php?platform=XBOX">XBOX</a></li>
+							<li><a href="forum.php?platform=3DS">3DS</a></li>
+							<li><a href="forum.php?platform=Wii">Wii</a></li>
+							<li><a href="forum.php?platform=PC">PC</a></li>
 						</ul>
 					</li>
 				</ul>

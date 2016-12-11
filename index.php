@@ -463,7 +463,7 @@ require("function/connectSQL.php");
 								
 							</div>
 							<?php
-								//熱門二手商品
+								//熱門二手遊戲
 								$hotUsedQuery = "SELECT * FROM products WHERE proType = '二手' ORDER BY clickNum DESC LIMIT 0,3";
 								$hotUsedRec = $pdo->query($hotUsedQuery);
 								$hotUsedInfo = array();
@@ -477,7 +477,7 @@ require("function/connectSQL.php");
 							<p>想要體驗出其不意的驚奇嗎？就到這裡來吧！</p>	
 							<div class="l3-content">
 								<div class="l3-card card l3ca"  onclick="location.href='SH_index.php'">
-									<h3>熱門二手商品</h3>
+									<h3>熱門二手遊戲</h3>
 									<div class="l3-pd-pic">
 										<img src="<?php echo $hotUsedInfo[1]["proImg"]; ?>">
 									</div>
@@ -485,7 +485,7 @@ require("function/connectSQL.php");
 									<span>NT$ <?php echo $hotUsedInfo[1]["proPrice"]; ?></span>
 								</div>
 								<div class="l3-card card l3cb"  onclick="location.href='SH_index.php'">
-									<h3>熱門二手商品</h3>
+									<h3>熱門二手遊戲</h3>
 									<div class="l3-pd-pic">
 										<img src="<?php echo $hotUsedInfo[2]["proImg"]; ?>">
 									</div>
@@ -493,7 +493,7 @@ require("function/connectSQL.php");
 									<span>NT$ <?php echo $hotUsedInfo[2]["proPrice"]; ?></span>
 								</div>
 								<div class="l3-card card l3cc"  onclick="location.href='SH_index.php'">
-									<h3>熱門二手商品</h3>
+									<h3>熱門二手遊戲</h3>
 									<div class="l3-pd-pic">
 										<img src="<?php echo $hotUsedInfo[3]["proImg"]; ?>">
 									</div>
@@ -528,21 +528,23 @@ require("function/connectSQL.php");
 
 							<p>最新最熱門的遊戲新聞都在這</p>
 							<div class="l4-content">
-								<div class="l4-card card"  onclick="location.href='#'">
-									<h3>初音來台簽唱會</h3>
+								<div class="l4-card card"  onclick="location.href='newsInfo.php?id=11'">
+									<h3>《菲莉絲的鍊金工房》繁體中文版將於 2017 年 1 月 12 日發售</h3>
 									<div class="l4-card-img">
-										<img src="images/new66.jpg">
+										<img src="images/news_index_1.jpg">
 									</div>	
-									<p>這是初音首次來台辦演唱會,門票在短短的五分鐘內就銷售一空，足以說明初音的超高人氣真是銳不可擋啊...</p>
+									<p>臺灣光榮特庫摩宣布「鍊金術士」系列最新作《菲莉絲的鍊金工房 ～不可思議之旅的鍊金術士～》...繼續閱讀</p>
 									<span>閱讀全文</span>
 								</div>
-								<div class="l4-card card"  onclick="location.href='#'">
-									<h3>三國無雙VR版新上市</h3>
+						
+						
+								
+								<div class="l4-card card"  onclick="location.href='newsInfo.php?id=12'">
+									<h3>佩里亞編年史研發團隊解析未來設計藍圖 玩家能夠主動創造的遊戲</h3>
 									<div class="l4-card-img">
-										<img src="images/Shin_Sangokumusou_Logo.png">
+										<img src="images/news_index_2.jpg">
 									</div>	
-									<p>睽違已久的三國無雙VR版預定在本週上市了！
-									相信有千千萬萬的玩家跟小編一樣望穿秋水,終於盼到這一天的到來！用VR玩三國無雙才有真正的萬夫莫敵的爽感啊...
+									<p>《Project NT》以存在著超自然生命體的幻想世界為背景，強調藉由獨特、新鮮的高品質卡通渲染效果...繼續閱讀
 									</p>
 									<span>閱讀全文</span>
 								</div>
@@ -572,7 +574,7 @@ require("function/connectSQL.php");
 
 						<p>在這裏可以找到志同道合的夥伴！</p>
 						<div class="l5-content">
-								<div class="l5-card card"  onclick="location.href='#'">
+								<div class="l5-card card"  onclick="location.href='forumIndex.php'">
 									<div class="member-info">
 										<div class="l5-card-img">
 											<img src="images/yidodo10800110002913.jpg">
@@ -582,38 +584,38 @@ require("function/connectSQL.php");
 										</div>
 									</div>	
 									<div class="discuss-each">
-										<div class="discuss-title">我遇到GM拉！</div>
-										<div class="discuss-date">2016-11-11</div>
+										<div class="discuss-title">我被GM搭訕拉！>///<</div>
+										<div class="discuss-date">2016-12-09</div>
 									</div>
 								</div>	
-								<div class="l5-card card"  onclick="location.href='#'">
+								<div class="l5-card card"  onclick="location.href='forumIndex.php'">
 									<div class="member-info">
 										<div class="l5-card-img">
-											<img src="images/yidodo10800110002913.jpg">
+											<img src="images/snow_white.jpg">
 										</div>	
 										<div class="member-nickname">
-											致命水蜜桃
+											♥白雪公主♥
 										</div>
 									</div>	
 									<div class="discuss-each">
-										<div class="discuss-title">我遇到GM拉！</div>
-										<div class="discuss-date">2016-11-11</div>
+										<div class="discuss-title">寶可夢讓我重新認識自己</div>
+										<div class="discuss-date">2016-12-11</div>
 									</div>
 								</div>
-								<div class="l5-card card"  onclick="location.href='#'">
+								<div class="l5-card card"  onclick="location.href='forumIndex.php'">
 									<div class="member-info">
 										<div class="l5-card-img">
-											<img src="images/yidodo10800110002913.jpg">
+											<img src="images/quite.jpg">
 										</div>	
 										<div class="member-nickname">
-											致命水蜜桃
+											源靜香
 										</div>
 									</div>	
 									<div class="discuss-each">
-										<div class="discuss-title">我遇到GM拉！</div>
-										<div class="discuss-date">2016-11-11</div>
+										<div class="discuss-title">最喜歡玩極速快感了！</div>
+										<div class="discuss-date">2016-12-12</div>
 									</div>
-								</div>
+								</div>	
 				<!-- 				<div class="l5-card card">
 									<div class="member-info">
 										<div class="l5-card-img"  onclick="location.href='#'">
@@ -711,7 +713,7 @@ require("function/connectSQL.php");
 </div>	
 
 
-			<div class="m-cover_all">
+	<!-- 		<div class="m-cover_all">
 				  <div class="m-cover_a m-cover">
 				    <div class="m-cover_a_line m-cover_line"></div>
 				    <span>TOPIA </span>
@@ -720,26 +722,33 @@ require("function/connectSQL.php");
 				    <span>GAME</span>
 				    <div class="m-cover_b_line m-cover_line"></div>			    
 				  </div>
-			</div>
-					<div id="scene0">
-						<div class="m-layer" id="scenex">
-							<!-- <div class="m-layer-l-img">
-								<img src="images/anime.gif">
-							</div> -->
-							<!-- <div class="m-layer-img">
-								<img src="images/index-3ds.png">
-							</div> -->
-							<div class="m-layer-border-box">
-									<p>遊戲烏托邦</p>
-									<p>G a m e</p>
-									<p>T o p i a</p>
-									<p>遊戲玩家的理想國度</p>
+			</div> -->
+					<div class="m-layer m-layer-scene" id="scenez">
+						<div id="scenex">
+			
+						</div>	
+					</div>	
+						
+
+
+
+					<div class="m-layer m-layer-scene" id="scene0">
+						
+							<div class="slogan">
+								GAME<span>TOPIA</span>
 							</div>
-							<!-- <div class="m-layer-border-box-mask"></div> -->
-							<!-- <div class="m-layer-r-img">
+							
+							<div class="m-layer-border-box">
+								<p>遊戲烏托邦</p>
+								<p>G a m e</p>
+								<p>T o p i a</p>
+								<p>遊戲玩家的理想國度</p>
+											
+							</div>
+							<div class="megami">
 								<img src="images/anime.gif">
-							</div> -->
-						</div>
+							</div>
+							
 					</div>	
 
 
@@ -759,28 +768,35 @@ require("function/connectSQL.php");
 								
 							<div id="owl-demo" class="owl-carousel owl-theme">
 							 
-								<div class="item">
-									<div class="m-l1-card m-card">
+								<div class="item m1c">
+									
 										<a href="products.php">
 											<img src="images/slider/slider01.jpg" alt="The Last of us">
 										</a>	
-									</div>
+									
 								</div>
-								<div class="item">
-									<div class="m-l1-card m-card">
+								<div class="item m1c">
+									
 										<a href="products.php">
 											<img src="images/slider/slider07.jpg" alt="The Last of us">
 										</a>
-									</div>
+									
 								</div>
-								<div class="item">
-									<div class="m-l1-card m-card">
+								<div class="item m1c">
+									
 										<a href="products.php">
 											<img src="images/slider/slider06.png" alt="The Last of us">
 										</a>	
-									</div>
+									
 								</div>
 
+							</div>
+
+							<div class="pre_btn1 pre_btn owl_btn">
+								<i class="fa fa-chevron-left" aria-hidden="true"></i>
+							</div>
+							<div class="next_btn1 next_btn owl_btn">
+								<i class="fa fa-chevron-right" aria-hidden="true"></i>
 							</div>
 
 						</div>
@@ -830,6 +846,15 @@ require("function/connectSQL.php");
 										</div>
 									</div>
 								</div>
+
+
+							<div class="pre_btn2 pre_btn owl_btn">
+								<i class="fa fa-chevron-left" aria-hidden="true"></i>
+							</div>
+							<div class="next_btn2 next_btn owl_btn">
+								<i class="fa fa-chevron-right" aria-hidden="true"></i>
+							</div>
+
 							</div>
 						</div>
 
@@ -851,38 +876,47 @@ require("function/connectSQL.php");
 								 
 									<div class="item">
 										<div class="m-l3-card m-card m-l3cb"  onclick="location.href='SH_index.php'">
-											<h3>熱門二手商品</h3>
+											<h3>熱門二手遊戲</h3>
 											<div class="m-l3-pd-pic">
-												<img src="images/pd.png">
+												<img src="images/Need for Speed -index.jpg">
 											</div>
-											<p>真三國無雙</p>
+											<p>Need for Speed</p>
+											<p>NT$ 450</p>
+											<!-- <span>瞭解更多</span> -->
+										</div>
+									</div>
+									<div class="item">
+										<div class="m-l3-card m-card m-l3cc"  onclick="location.href='SH_index.php'">
+											<h3>熱門二手遊戲</h3>
+											<div class="m-l3-pd-pic">
+												<img src="images/The Last of Us-index.jpg">
+											</div>
+											<p>The Last of Us</p>
 											<p>NT$ 500</p>
 											<!-- <span>瞭解更多</span> -->
 										</div>
 									</div>
 									<div class="item">
 										<div class="m-l3-card m-card m-l3cc"  onclick="location.href='SH_index.php'">
-											<h3>熱門二手商品</h3>
+											<h3>熱門二手遊戲</h3>
 											<div class="m-l3-pd-pic">
-												<img src="images/pd.png">
+												<img src="images/finafantasy-index.jpg">
 											</div>
-											<p>真三國無雙</p>
-											<p>NT$ 500</p>
-											<!-- <span>瞭解更多</span> -->
-										</div>
-									</div>
-									<div class="item">
-										<div class="m-l3-card m-card m-l3cc"  onclick="location.href='SH_index.php'">
-											<h3>熱門二手商品</h3>
-											<div class="m-l3-pd-pic">
-												<img src="images/pd.png">
-											</div>
-											<p>真三國無雙</p>
-											<p>NT$ 500</p>
+											<p>Final Fantasy XV</p>
+											<p>NT$ 600</p>
 											<!-- <span>瞭解更多</span> -->
 										</div>
 									</div>
 								</div>
+
+
+							<div class="pre_btn3 pre_btn owl_btn">
+								<i class="fa fa-chevron-left" aria-hidden="true"></i>
+							</div>
+							<div class="next_btn3 next_btn owl_btn">
+								<i class="fa fa-chevron-right" aria-hidden="true"></i>
+							</div>
+							
 							</div>
 						</div>
 
@@ -901,41 +935,46 @@ require("function/connectSQL.php");
 							<div class="m-l4-content">
 								<div id="owl-demo-news" class="owl-carousel owl-theme">
 									<div class="item">
-										<div class="m-l4-card m-card"  onclick="location.href='#'">
-											<h3>初音來台簽唱會</h3>
+										<div class="m-l4-card m-card"  onclick="location.href='newsInfo.php?id=13'">
+											<h3>加速世界 VS 刀劍神域 千年的黃昏》2017 年 3 月 16 日發售</h3>
 											<div class="m-l4-card-img">
-												<img src="images/idol.jpg">
+												<img src="images/news_index_3.png">
 											</div>	
-											<p>這是初音首次來台辦演唱會,門票在短短的五分鐘內就銷售一空，足以說明初音的超高人氣真是銳不可擋啊...</p>
+											<p>BANDAI NAMCO Entertainment 於昨（8）日公布，動作 RPG 遊戲《加速世界 VS 刀劍神域 千年的黃昏...繼續閱讀
+											</p>
+											<span>閱讀全文</span>
+										</div>
+									</div>	
+									<div class="item">
+										<div class="m-l4-card m-card"  onclick="location.href='newsInfo.php?id=11'">
+											<h3>《菲莉絲的鍊金工房》繁體中文版將於 2017 年 1 月 12 日發售</h3>
+											<div class="m-l4-card-img">
+												<img src="images/news_index_1.jpg">
+											</div>	
+											<p>臺灣光榮特庫摩宣布「鍊金術士」系列最新作《菲莉絲的鍊金工房 ～不可思議之旅的鍊金術士～》...繼續閱讀</p>
 											<span>閱讀全文</span>
 										</div>
 									</div>
 									<div class="item">
 										
-										<div class="m-l4-card m-card"  onclick="location.href='#'">
-											<h3>三國無雙VR版新上市</h3>
+										<div class="m-l4-card m-card"  onclick="location.href='newsInfo.php?id=12'">
+											<h3>佩里亞編年史研發團隊解析未來設計藍圖 玩家能夠主動創造的遊戲</h3>
 											<div class="m-l4-card-img">
-												<img src="images/Shin_Sangokumusou_Logo.png">
+												<img src="images/news_index_2.jpg">
 											</div>	
-											<p>睽違已久的三國無雙VR版預定在本週上市了！
-											相信有千千萬萬的玩家跟小編一樣望穿秋水,終於盼到這一天的到來！用VR玩三國無雙才有真正的萬夫莫敵的爽感啊...
+											<p>《Project NT》以存在著超自然生命體的幻想世界為背景，強調藉由獨特、新鮮的高品質卡通渲染效果，加上個性化的裝備、技能等系統，帶給線上遊戲愛好者別具風格的遊戲樂趣 ...繼續閱讀
 											</p>
 											<span>閱讀全文</span>
 										</div>
 									</div>
-									<div class="item">
-										<div class="m-l4-card m-card"  onclick="location.href='#'">
-											<h3>三國無雙VR版新上市</h3>
-											<div class="m-l4-card-img">
-												<img src="images/Shin_Sangokumusou_Logo.png">
-											</div>	
-											<p>睽違已久的三國無雙VR版預定在本週上市了！
-											相信有千千萬萬的玩家跟小編一樣望穿秋水,終於盼到這一天的到來！用VR玩三國無雙才有真正的萬夫莫敵的爽感啊...
-											</p>
-											<span>閱讀全文</span>
-										</div>
-									</div>
+						
 								</div>	
+								<div class="pre_btn4 pre_btn owl_btn">
+											<i class="fa fa-chevron-left" aria-hidden="true"></i>
+										</div>
+										<div class="next_btn4 next_btn owl_btn">
+											<i class="fa fa-chevron-right" aria-hidden="true"></i>
+								</div>
 							</div>	
 						</div>
 
@@ -967,45 +1006,45 @@ require("function/connectSQL.php");
 											</div>
 										</div>	
 										<div class="m-discuss-each">
-											<div class="m-discuss-title">我遇到GM拉！</div>
-											<div class="m-discuss-date">2016-11-11</div>
+											<div class="m-discuss-title">我被GM搭訕拉！>///<</div>
+											<div class="m-discuss-date">2016-12-09</div>
 										</div>
 										
 									</div>	
-									<div class="m-l5-card m-card"  onclick="location.href='#'">
+									<div class="m-l5-card m-card"  onclick="location.href='forumIndex.php'">
 										
 										<div class="m-member-info">
 											<div class="m-l5-card-img">
-												<img src="images/yidodo10800110002913.jpg">
+												<img src="images/quite.jpg">
 											</div>	
 											<div class="m-member-nickname">
-												致命水蜜桃
+												乂源靜香乂
 											</div>
 										</div>
 										<div class="m-discuss-each">
-											<div class="m-discuss-title">我遇到GM拉！</div>
-											<div class="m-discuss-date">2016-11-11</div>
+											<div class="m-discuss-title">最喜歡玩極速快感了！</div>
+											<div class="m-discuss-date">2016-12-10</div>
 										</div>	
 										
 									</div>
-									<div class="m-l5-card m-card"  onclick="location.href='#'">
+									<div class="m-l5-card m-card"  onclick="location.href='forumIndex.php'">
 										
 										<div class="m-member-info">
 											<div class="m-l5-card-img">
-												<img src="images/yidodo10800110002913.jpg">
+												<img src="images/snow_white.jpg">
 											</div>	
 											<div class="member-nickname">
-												致命水蜜桃
+												♥白雪公主♥
 											</div>
 										</div>	
 										<div class="m-discuss-each">
-											<div class="m-discuss-title">我遇到GM拉！</div>
-											<div class="m-discuss-date">2016-11-11</div>
+											<div class="m-discuss-title">寶可夢讓我重新認識自己</div>
+											<div class="m-discuss-date">2016-12-12</div>
 										</div>
 										
 									</div>
 										
-									<div class="m-l5-card m-card"  onclick="location.href='#'">
+									<div class="m-l5-card m-card"  onclick="location.href='forumIndex.php'">
 										
 										<div class="m-member-info">
 											<div class="m-l5-card-img">
@@ -1022,11 +1061,11 @@ require("function/connectSQL.php");
 
 		<!-- ===============================for 手機=================================						 -->
 								<div class="m-l5-content-2">
-									<div class="m-l5-card m-card"  onclick="location.href='#'">
+									<div class="m-l5-card m-card"  onclick="location.href='forumIndex.php'">
 										
 										<div class="m-discuss-each">
-											<div class="m-discuss-title">我遇到GM拉！</div>
-											<div class="m-discuss-date">2016-11-11</div>
+											<div class="m-discuss-title">我被GM搭訕拉！>///<</div>
+											<div class="m-discuss-date">2016-12-09</div>
 										</div>
 										<div class="m-member-info">
 											<div class="m-l5-card-img">
@@ -1038,10 +1077,10 @@ require("function/connectSQL.php");
 										</div>	
 										
 									</div>	
-									<div class="m-l5-card m-card"  onclick="location.href='#'">
+									<div class="m-l5-card m-card"  onclick="location.href='forumIndex.php'">
 										
 										<div class="m-discuss-each">
-											<div class="m-discuss-title">我遇到GM拉！</div>
+											<div class="m-discuss-title">最喜歡玩極速快感了！owo</div>
 											<div class="m-discuss-date">2016-11-11</div>
 										</div>	
 										<div class="m-member-info">
@@ -1049,15 +1088,15 @@ require("function/connectSQL.php");
 												<img src="images/yidodo10800110002913.jpg">
 											</div>	
 											<div class="m-member-nickname">
-												致命水蜜桃
+												乂源靜香乂
 											</div>
 										</div>
 										
 									</div>
-									<div class="m-l5-card m-card"  onclick="location.href='#'">
+									<div class="m-l5-card m-card"  onclick="location.href='forumIndex.php'">
 										
 										<div class="m-discuss-each">
-											<div class="m-discuss-title">我遇到GM拉！</div>
+											<div class="m-discuss-title">寶可夢讓我重新認識自己</div>
 											<div class="m-discuss-date">2016-11-11</div>
 										</div>	
 										<div class="m-member-info">
@@ -1065,13 +1104,13 @@ require("function/connectSQL.php");
 												<img src="images/yidodo10800110002913.jpg">
 											</div>	
 											<div class="m-member-nickname">
-												致命水蜜桃
+												♥白雪公主♥
 											</div>
 										</div>
 										
 									</div>
 										
-									<div class="m-l5-card m-card"  onclick="location.href='#'">
+									<div class="m-l5-card m-card"  onclick="location.href='forumIndex.php'">
 										
 										<div class="m-discuss-each">
 											<div class="m-discuss-title">我遇到GM拉！</div>
@@ -1113,7 +1152,376 @@ require("function/connectSQL.php");
 
 		</div>
 
+		<div id="index-container3">	
+
+			<hr id="m-index-hr">					
+	
+	<!-- <script src="js/jquery-3.1.0.min.js"></script> -->
+
+			<div class="triBox">
+				<div class='triContainer'>
+					  <div class='tri reverse'></div>
+					  <div class='tri reverse'></div>
+					  <div class='tri'></div>
+					  <div class='tri reverse'></div>
+					  <div class='tri reverse'></div>
+					  <div class='tri'></div>
+					  <div class='tri reverse' id="center"></div>
+					  <div class='tri'></div>
+					  <div class='tri reverse'></div>
+					  <div class="tri"></div> <!-- 下半部 -->
+					  <div class="tri reverse"></div>
+					  <div class='tri' id="center"></div>
+					  <div class='tri reverse'></div>
+					  <div class="tri"></div>
+					  <div class="tri"></div>
+					  <div class='tri reverse'></div>
+					  <div class="tri"></div>
+					  <div class="tri"></div>
+				 <div class="tritxt_box">	
+					<div class="tritxt2">GameTopia</div>
+					<div class="tritxt">L O A D I N G</div>
+				</div>
+				</div>
+			</div>	
+
+
+	<!-- 		<div class="m-cover_all">
+				  <div class="m-cover_a m-cover">
+				    <div class="m-cover_a_line m-cover_line"></div>
+				    <span>TOPIA </span>
+				  </div>
+				  <div class="m-cover_b m-cover">
+				    <span>GAME</span>
+				    <div class="m-cover_b_line m-cover_line"></div>			    
+				  </div>
+			</div> -->
+					<div class="m-layer m-layer-scene" id="scenez8">
+						<div id="scenex8">
+			
+						</div>	
+					</div>	
 						
+
+
+
+					<div class="m-layer m-layer-scene" id="scene08">
+						
+							<div class="slogan">
+								GAME<span>TOPIA</span>
+							</div>
+							
+							<div class="m-layer-border-box">
+								<p>遊戲烏托邦</p>
+								<p>G a m e</p>
+								<p>T o p i a</p>
+								<p>遊戲玩家的理想國度</p>
+											
+							</div>
+							<div class="megami">
+								<img src="images/anime.gif">
+							</div>
+							
+					</div>	
+
+
+						<script src="js/owl.carousel.min.js"></script>
+						
+
+						<div class="m-layer m-layer-scene" id="scene18">
+							
+							<div class="m-layer-title">
+								<div class="m-layer-diamond"></div>	
+								<h2>豐饒之城</h2>
+								
+							</div>
+
+							<p>任何你想要的遊戲都可以在這裡找到！</p>
+							
+								
+							<div id="owl-demo8" class="owl-carousel owl-theme">
+							 
+								<div class="item m1c">
+									
+										<a href="products.php">
+											<img src="images/slider/slider01.jpg" alt="The Last of us">
+										</a>	
+									
+								</div>
+								<div class="item m1c">
+									
+										<a href="products.php">
+											<img src="images/slider/slider07.jpg" alt="The Last of us">
+										</a>
+									
+								</div>
+								<div class="item m1c">
+									
+										<a href="products.php">
+											<img src="images/slider/slider06.png" alt="The Last of us">
+										</a>	
+									
+								</div>
+
+							</div>
+
+							<div class="pre_btn8 pre_btn owl_btn">
+								<i class="fa fa-chevron-left" aria-hidden="true"></i>
+							</div>
+							<div class="next_btn8 next_btn owl_btn">
+								<i class="fa fa-chevron-right" aria-hidden="true"></i>
+							</div>
+
+						</div>
+
+					
+					<!-- ===============section2=============================	 -->
+						
+						<div class="m-layer m-layer-scene" id="scene28">
+							
+							<div class="m-layer-title">
+								<div class="m-layer-diamond"></div>	
+								<h2>恩澤之谷</h2>
+								
+							</div>
+
+							<p>傳達你的心意給另一個他!快來製作獨一無二的卡片吧!</p>
+							<div class="m-l2-content">
+
+											
+								<div id="owl-demo-gift8" class="owl-carousel owl-theme" onclick="location.href='giftAndCard.php'">
+								 	  <div class="item"><img src="images/female_active.png" alt="Owl Image"></div>
+									  <div class="item"><img src="images/male_considerate_action.png" alt="Owl Image"></div>
+									  <div class="item"><img src="images/female_passionate_adventure.png" alt="Owl Image"></div>
+									  <div class="item"><img src="images/male_steady_exciting.png" alt="Owl Image"></div>
+									  <div class="item"><img src="images/female_active_cooperative.png" alt="Owl Image"></div>
+									  <div class="item"><img src="images/male_considerate_casual.png" alt="Owl Image"></div>
+									  <div class="item"><img src="images/female_active_adventure.png" alt="Owl Image"></div>
+									  <div class="item"><img src="images/male_original.png" alt="Owl Image"></div>
+									  <div class="item"><img src="images/female_steady_cooperative.png" alt="Owl Image"></div>
+									  <div class="item"><img src="images/male_passionate_roleplaying.png" alt="Owl Image"></div>
+									  <div class="item"><img src="images/female_active_shooting.png" alt="Owl Image"></div>
+									  <div class="item"><img src="images/male_considerate_exciting.png" alt="Owl Image"></div>
+									 						
+								</div>
+								<div class="pre_btn28 pre_btn owl_btn">
+										<i class="fa fa-chevron-left" aria-hidden="true"></i>
+									</div>
+									<div class="next_btn28 next_btn owl_btn">
+										<i class="fa fa-chevron-right" aria-hidden="true"></i>
+								</div>
+							</div>
+						</div>
+
+				<!-- ================section3===================		 -->
+
+					
+
+						<div class="m-layer m-layer-scene" id="scene38">
+							<div class="m-layer-title">
+								<div class="m-layer-diamond"></div>	
+								<h2>獵寶之森</h2>
+								
+							</div>
+							<p>想要體驗出其不意的驚奇嗎？就到這裡來吧！</p>	
+							<div class="m-l3-content">
+								
+										
+								<div id="owl-demo-sh8" class="owl-carousel owl-theme">
+								 
+									<div class="item">
+										<div class="m-l3-card m-card m-l3cb"  onclick="location.href='SH_index.php'">
+											<h3>熱門二手遊戲</h3>
+											<div class="m-l3-pd-pic">
+												<img src="images/pd.png">
+											</div>
+											<p>真三國無雙</p>
+											<p>NT$ 500</p>
+											<!-- <span>瞭解更多</span> -->
+										</div>
+									</div>
+									<div class="item">
+										<div class="m-l3-card m-card m-l3cc"  onclick="location.href='SH_index.php'">
+											<h3>熱門二手遊戲</h3>
+											<div class="m-l3-pd-pic">
+												<img src="images/ranger-index.jpg">
+											</div>
+											<p>地城守護者2</p>
+											<p>NT$ 500</p>
+											<!-- <span>瞭解更多</span> -->
+										</div>
+									</div>
+									<div class="item">
+										<div class="m-l3-card m-card m-l3cc"  onclick="location.href='SH_index.php'">
+											<h3>熱門二手遊戲</h3>
+											<div class="m-l3-pd-pic">
+												<img src="images/Need for Speed -index.jpg">
+											</div>
+											<p>Need for Speed</p>
+											<p>NT$ 450</p>
+											<!-- <span>瞭解更多</span> -->
+										</div>
+									</div>
+									<div class="item">
+										<div class="m-l3-card m-card m-l3cb"  onclick="location.href='SH_index.php'">
+											<h3>熱門二手遊戲</h3>
+											<div class="m-l3-pd-pic">
+												<img src="images/The Last of Us-index.jpg">
+											</div>
+											<p>The Last of Us</p>
+											<p>NT$ 550</p>
+											<!-- <span>瞭解更多</span> -->
+										</div>
+									</div>
+									<div class="item">
+										<div class="m-l3-card m-card m-l3cc"  onclick="location.href='SH_index.php'">
+											<h3>熱門二手遊戲</h3>
+											<div class="m-l3-pd-pic">
+												<img src="images/finafantasy-index.jpg">
+											</div>
+											<p>Final Fantasy XV</p>
+											<p>NT$ 600</p>
+											<!-- <span>瞭解更多</span> -->
+										</div>
+									</div>
+									<div class="item">
+										<div class="m-l3-card m-card m-l3cc"  onclick="location.href='SH_index.php'">
+											<h3>熱門二手遊戲</h3>
+											<div class="m-l3-pd-pic">
+												<img src="images/god-warrior.jpg">
+											</div>
+											<p>女武神</p>
+											<p>NT$ 500</p>
+											<!-- <span>瞭解更多</span> -->
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+					
+						
+               <!-- ===================section4================== -->
+						
+           
+						<div class="m-layer m-layer-scene" id="scene48">
+							<div class="m-layer-title">
+								<div class="m-layer-diamond"></div>	
+								<h2>仰望之塔</h2>
+								
+							</div>
+							<p>最新最熱門的遊戲新聞都在這</p>
+							
+							<div class="l4-content">
+								
+										<div class="l4-card card"  onclick="location.href='newsInfo.php?id=11'">
+											<h3>《菲莉絲的鍊金工房》繁體中文版將於 2017 年 1 月 12 日發售</h3>
+											<div class="l4-card-img">
+												<img src="images/news_index_1.jpg">
+											</div>	
+											<p>臺灣光榮特庫摩宣布「鍊金術士」系列最新作《菲莉絲的鍊金工房 ～不可思議之旅的鍊金術士～》...繼續閱讀</p>
+											<span>閱讀全文</span>
+										</div>
+								
+								
+										
+										<div class="l4-card card"  onclick="location.href='newsInfo.php?id=12'">
+											<h3>佩里亞編年史研發團隊解析未來設計藍圖 玩家能夠主動創造的遊戲</h3>
+											<div class="l4-card-img">
+												<img src="images/news_index_2.jpg">
+											</div>	
+											<p>《Project NT》以存在著超自然生命體的幻想世界為背景，強調藉由獨特、新鮮的高品質卡通渲染效果...繼續閱讀
+											</p>
+											<span>閱讀全文</span>
+										</div>
+									
+							</div>		
+						</div>
+
+					
+		
+					
+
+					<!-- ================section5====================	 -->
+					
+
+
+						<div class="m-layer m-layer-scene" id="scene58">
+							
+							<div class="m-layer-title">
+									<div class="m-layer-diamond"></div>	
+									<h2>呢喃之鎮</h2>
+				
+							</div>
+							<p>在這裏可以找到志同道合的夥伴！</p>
+						<div class="l5-content">
+								<div class="l5-card card"  onclick="location.href='forumIndex.php'">
+									<div class="member-info">
+										<div class="l5-card-img">
+											<img src="images/yidodo10800110002913.jpg">
+										</div>	
+										<div class="member-nickname">
+											致命水蜜桃
+										</div>
+									</div>	
+									<div class="discuss-each">
+										<div class="discuss-title">我被GM搭訕拉！>///<</div>
+										<div class="discuss-date">2016-12-09</div>
+									</div>
+								</div>	
+								<div class="l5-card card"  onclick="location.href='forumIndex.php'">
+									<div class="member-info">
+										<div class="l5-card-img">
+											<img src="images/snow_white.jpg">
+										</div>	
+										<div class="member-nickname">
+											♥白雪公主♥
+										</div>
+									</div>	
+									<div class="discuss-each">
+										<div class="discuss-title">寶可夢讓我重新認識自己</div>
+										<div class="discuss-date">2016-12-11</div>
+									</div>
+								</div>
+								<div class="l5-card card"  onclick="location.href='forumIndex.php'">
+									<div class="member-info">
+										<div class="l5-card-img">
+											<img src="images/quite.jpg">
+										</div>	
+										<div class="member-nickname">
+											源靜香
+										</div>
+									</div>	
+									<div class="discuss-each">
+										<div class="discuss-title">最喜歡玩極速快感了！</div>
+										<div class="discuss-date">2016-12-12</div>
+									</div>
+								</div>	
+						</div>
+
+						
+				<!-- ===================section6===================== -->
+					
+				<!-- 		
+						<div class="m-layer m-layer-scene" id="scene68">
+							
+							
+								<img id ="m-womangod" src="images/anime.gif">
+								<div class="m-womangod-do" onclick="location.href='products.php'">
+									<i class="fa fa-hand-o-right" aria-hidden="true"></i>
+									讓我帶你進入遊戲烏托邦！
+								</div>
+							
+						</div>
+
+		 -->
+		
+		</div>	
+
+		<?php
+			include("function/footer.php");
+		?>
+				
 	
 	</div>				
 </body>

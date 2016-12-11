@@ -10,6 +10,11 @@ function init(){
 		$('.right').css('right','-100%');
 	}); 
 
+	$('#writeNewMessageOnCellPhone').click(function(){
+		$('.right').css('right','0').css('index',500);
+		$('#writeMail').prop('checked', 'true');
+	});
+
 
 	changeBar();
 	getStart();

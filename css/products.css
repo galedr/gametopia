@@ -29,6 +29,7 @@ nav .logo img{
 body{
   background: url(../images/pageShoppingmall.png) no-repeat center center;
   background-attachment: fixed;
+  background-size: cover;
 }
 
 
@@ -402,7 +403,7 @@ footer p{
 	.productsBox{width: 100%;}
 	.adsSct{display: none;}
 	.products{width: 100%;}
-	.banner{height: 400px;margin-bottom: 40px;}
+	.banner{height: 350px;margin-bottom: 20px;}
 	svg{display: none;}
 	.sliderArr{display: none;}
 	div.filter * {font-size: 15px;} /*中間搜尋列*/
@@ -428,13 +429,14 @@ footer p{
 	.banner{height: 400px;}
 	.sliderArr{top: 105px;}
 	.sliderArr i{font-size: 160px;}
-	.sliderArr i[class*="left"]{left: 17%;}
-	.sliderArr i[class*="right"]{right: 17%;}
+	/*.sliderArr i[class*="left"]{left: 11%;}
+	.sliderArr i[class*="right"]{right: 11%;}*/
 	#sliderBox{top: -12px;}
 }
 
 /*小黃平板橫*/
 @media screen and (min-width: 992px) and (max-width: 1199px){
+	.banner{height: 400px;}
 	.productsBox{width: 970px;}
 	.sliderArr{top: 110px;}
 	#sliderBox{top: -15px;}
@@ -451,6 +453,15 @@ footer p{
 
 }
 
-
+@media screen and (max-width: 400px){
+	div.filter{
+		max-width: 100%;
+		margin: auto;
+	}
+	div.filter *{font-size: 13px;}
+	.giftSct{height: 80px;}
+	.products h5{font-size: 15px;}
+	.products .price{font-size: 13px;}
+}
 
 

@@ -34,14 +34,14 @@ if(!isset($_SESSION["GTopiaAccount"]) || !isset($_SESSION["GTopiaMemLevel"])){
 
 		}else{
 
-			header("refresh: 0.5; url = $preUrl");
-			// echo "
-			// 	<script>
-			// 		alert('您輸入的帳號密碼不對喔');
-			// 		history.go(-1);
-			// 		location.reload();
-			// 	</script>				
-			// ";
+			
+			echo "
+				<script>
+					alert('您輸入的帳號密碼不對喔');
+					history.go(-1);
+					location.reload();
+				</script>				
+			";
 
 		}
 

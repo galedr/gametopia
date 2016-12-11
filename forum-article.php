@@ -60,16 +60,15 @@ error_reporting(E_ALL || ~E_NOTICE);
 				<input type="hidden" name="comId" value="<?php echo $_REQUEST['comId'];?>">
 				<div class="platNcat">
 					<select name="platform" id="platform">
-						<option value="default" selected>平台</option>
+						<option value="default">平台</option>
 						<option value="PS4">PS</option>
 						<option value="XBOX">XBOX</option>
 						<option value="PC">PC</option>
 						<option value="3DS">3DS</option>
-						<!-- <option value="mobile">手機</option> -->
 					</select>
 					<select name="category" id="postCategory">
 						<option value="default">分類</option>
-						<option value="notice">公告</option> <!-- 要偵測是否為管理員 -->
+						<!-- <option value="notice">公告</option> -->
 						<option value="chat">閒聊</option>
 						<option value="review">心得</option>
 						<option value="guide">攻略</option>
@@ -85,10 +84,8 @@ error_reporting(E_ALL || ~E_NOTICE);
 				<div class="botUi">
 					<label>發文驗證碼:<span id="randomCode"></span><input type="text" name="examCode" id="examCode"></label>
 					<button type="button" id="btnSend">發表</button>
-					<!-- <button id="btnPreview">預覽</button> -->
 				</div>
 			</form>
-			<!-- <a class="btnClose" id="btnClose">&times;</a> -->
 
 			
 		</div>
@@ -252,21 +249,20 @@ error_reporting(E_ALL || ~E_NOTICE);
 						<button type="button" class="btnReply" id="btnReply">回覆</button>
 						
 						<?php
+							$repLikeQuery = "SELECT * FROM reply_like WHERE replyId = '$replyId'";
+							$repLikeRec = $pdo->query($repLikeQuery);
+							$repLikeCount = $repLikeRec->rowCount();
 							//點讚
 							if(isset($_SESSION["GTopiaAccount"])){
 
 								$memAccount = $_SESSION["GTopiaAccount"];
-								$replyId = $repRow["replyId"];
-								$repLikeQuery = "SELECT * FROM reply_like WHERE replyId = '$replyId'";
-								$repLikeRec = $pdo->query($repLikeQuery);
-								$repLikeCount = $repLikeRec->rowCount();
-								
+								$replyId = $repRow["replyId"];															
 								//確認登入的會員是否已經按過讚
 								
 								$checkQuery = "SELECT * FROM reply_like WHERE memAccount = '$memAccount' AND replyId = '$replyId' AND active = 'on'";
 								$checkRec = $pdo->query($checkQuery);
 								$check = $checkRec->rowCount();
-								echo $check;
+								
 
 								if($check == 0){
 						?>

@@ -152,7 +152,7 @@ function dofirst(){
 
 // ----------------loading畫面----------------
 		
-		if(web_width >= 992){
+		if(web_width >= 1200){
 
 	
 	      $('.triBox').animate({opacity:'0'},500).css('z-index',-1);
@@ -177,13 +177,13 @@ function dofirst(){
 		}
 
 
-		if(web_width>=992){
-			$('	#index-container1').css('display','block');
-			$('	#index-container2').css('display','none');
-		}else if(web_width<992){
-			$('	#index-container1').css('display','none');
-			$('	#index-container2').css('display','block');
-		}
+		// if(web_width>=992){
+		// 	$('	#index-container1').css('display','block');
+		// 	$('	#index-container2').css('display','none');
+		// }else if(web_width<992){
+		// 	$('	#index-container1').css('display','none');
+		// 	$('	#index-container2').css('display','block');
+		// }
 
 
 // =============================================================     
@@ -328,7 +328,7 @@ function dofirst(){
 			var web_window = $(window);
 			var web_width = web_window.width();
 			var window_top_position = web_window.scrollTop();
-			if(web_width >= 980 ){
+			if(web_width >= 1200 ){
 				if(window_top_position<=2471){
 					// $('body').css('background-image','../images/b8.jpg');
 					$('body').removeClass('bg2');
@@ -380,23 +380,27 @@ function dofirst(){
 					console.log('ok6');	
 				}
 			}else{
-				$('body').addClass('bgm');
+				$('body').removeClass();
+				$('body').css("background-color","#000");
 			}
 
 		}
 
 
 		if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
-			$('body').addClass('bg_device');
+			$('body').removeClass();
 
 		}
 
 		///偵測滑動距離讓導覽列變化
 		function changeNav(){
 			var web_window = $(window);
+			var web_width = $(window).width();
 			var web_height = web_window.height();
 			var window_top_position = web_window.scrollTop();
 					
+
+			if( web_width>=1200){		
 				if(window_top_position<=2471 && window_top_position >=web_height){
 					// $('.header').css('opacity',.4);
 
@@ -475,7 +479,7 @@ function dofirst(){
 					$('.header-meun-all li a').css('color','#385F7A');
 					console.log('ok_6');	
 				}
-	
+			}
 
 		}
 
@@ -630,7 +634,7 @@ function dofirst(){
 		var controller = new ScrollMagic.Controller();
 		
 //如果視窗寬度大於992	就執行第一支動畫	
- if(web_width >= 980){
+ if(web_width >= 1200){
 
 		move0 = new TimelineMax().to("#lx" ,1.5,{
 
@@ -1950,13 +1954,149 @@ function dofirst(){
 }
 // ======================手機端==========================
 
-else {
+else if(web_width<1200 && web_width>=992){
 
 
-	var tween0 = TweenMax.staggerFromTo( $( '#scenex' ), 1, { 
+	
+// =====================================ver3
+	var tween08 = TweenMax.staggerFromTo( $( '#scene08' ), 1, { 
     autoAlpha:1,
-    // position:"fixed"
 	},{ autoAlpha:0}, 1 );
+
+	var scene08 = new ScrollMagic.Scene({
+	    triggerElement: '#scene18',
+	    // duration: $( '#scene18' ).innerHeight(),
+	    reverse:true
+
+	})
+	// .addIndicators()
+	.setPin("#scene08")
+	.addTo(controller)
+	.setTween( tween08 )
+	.triggerHook(0.98)
+	.setClassToggle( "#scenex8", "fadeIn" );
+
+	
+
+// ==========================================================
+	var tween18 = TweenMax.staggerFrom( $( '#scene18' ), 0.5, { 
+
+	autoAlpha: 0,
+    y: "+=10"
+	}, 1 );
+
+	var scene18 = new ScrollMagic.Scene({
+	    triggerElement: '#scene18',
+	    // duration: $( '#scene18' ).innerHeight(),
+	    reverse:false
+
+	})
+	// .addIndicators()
+	// .setPin("#index-container2")
+	.addTo(controller)
+	.setTween( tween18 )
+	.setClassToggle( "#scene18", "fadeIn" );
+
+// -----------------------------------------------------
+	var tween28 = TweenMax.staggerFrom( $( '#scene28' ), 0.5, { 
+ //    autoAlpha: 0,
+ //    scale: 0.2,
+ //    ease:Elastic.easeInOut
+	// }, 0.3 );
+	autoAlpha: 0,
+    y: "+=10"
+	}, 1 );
+
+
+	var scene28 = new ScrollMagic.Scene({
+	    triggerElement: '#scene28',
+	    // duration: $( '#scene28' ).innerHeight(),
+	    reverse:false
+
+	})
+	// .addIndicators()
+	.addTo(controller)
+	.setTween( tween28 )
+	.setClassToggle( "#scene28", "fadeIn" );
+
+// --------------------------------------------------
+	var tween38 = TweenMax.staggerFrom( $( '#scene38' ), 0.5, { 
+    autoAlpha: 0,
+    y: "+=10"
+	}, 1 );
+
+	var scene38 = new ScrollMagic.Scene({
+	    triggerElement: '#scene38',
+	    duration: $( '#scene38' ).innerHeight(),
+	    reverse:false
+
+	})
+	// .addIndicators()
+	.addTo(controller)
+	.setTween( tween38 )
+	.setClassToggle( "#scene38", "fadeIn" );
+// --------------------------------------------------
+	var tween48 = TweenMax.staggerFrom( $( '#scene48' ), 0.5, { 
+    autoAlpha: 0,
+    y: "+=10"
+	}, 1 );
+
+	var scene48 = new ScrollMagic.Scene({
+	    triggerElement: '#scene48',
+	    duration: $( '#scene48' ).innerHeight(),
+	    reverse:false
+
+	})
+	// .addIndicators()
+	.addTo(controller)
+	.setTween( tween48 )
+	.setClassToggle( "#scene48", "fadeIn" );
+
+// --------------------------------------------------
+	var tween58 = TweenMax.staggerFrom( $( '#scene58' ), 0.5, { 
+    autoAlpha: 0,
+    y: "+=10"
+	}, 1 );
+
+	var scene58= new ScrollMagic.Scene({
+	    triggerElement: '#scene58',
+	    duration: $( '#scene58' ).innerHeight(),
+	    reverse:false
+
+	})
+	// .addIndicators()
+	.addTo(controller)
+	.setTween( tween58 )
+	.setClassToggle( "#scene58", "fadeIn" );
+
+
+// --------------------------------------------------	
+	var tween68 = TweenMax.staggerFrom( $( '#scene68' ), 0.5, { 
+    autoAlpha: 0.5,
+    y: "+=10"
+	}, 1 );
+
+	var scene68 = new ScrollMagic.Scene({
+	    triggerElement: '#scene68',
+	    duration: $( '#scene68' ).innerHeight(),
+	    reverse:false
+
+	})
+	// .addIndicators()
+	.addTo(controller)
+	.setTween( tween68 )
+	.setClassToggle( "#scene68", "fadeIn" );
+
+	}else{
+
+	// 	var tween08 = TweenMax.staggerFromTo( $( '#scenex8' ), 1, { 
+ //    autoAlpha:1,
+	// },{ autoAlpha:0}, 1 );
+
+
+	var tween0 = TweenMax.staggerFromTo( $( '#scene0' ), 1, { 
+    opacity:1,
+	},{opacity:'0'}, 1 );
 
 	var scene0 = new ScrollMagic.Scene({
 	    triggerElement: '#scene1',
@@ -1968,35 +2108,14 @@ else {
 	.setPin("#scene0")
 	.addTo(controller)
 	.setTween( tween0 )
-	.triggerHook(0.97)
-	.setClassToggle( "#scenex", "fadeIn" );
-
-	// var tween0 = TweenMax.staggerFromTo( $( 'm-layer-border-box' ), 1, { 
- //    autoAlpha:1,
- //    // position:"fixed"
-	// },{ autoAlpha:0}, 1 );
-
-	// var scene0 = new ScrollMagic.Scene({
-	//     triggerElement: '#scene1',
-	//     // duration: $( '#scene1' ).innerHeight(),
-	//     reverse:true
-
-	// })
-	// .addIndicators()
-	// .setPin("#scene0")
-	// .addTo(controller)
-	// .setTween( tween0 )
-	// .triggerHook(0.95)
-	// .setClassToggle( "#scenex", "fadeIn" );
+	.triggerHook(0.98)
+	.setClassToggle( "#scene", "fadeIn" );
 
 	
 
 // ==========================================================
 	var tween1 = TweenMax.staggerFrom( $( '#scene1' ), 0.5, { 
- //    autoAlpha: 0,
- //    scale: 0.8,
- //    ease:Elastic.easeInOut
-	// }, 1 );
+
 	autoAlpha: 0,
     y: "+=10"
 	}, 1 );
@@ -2020,7 +2139,7 @@ else {
  //    ease:Elastic.easeInOut
 	// }, 0.3 );
 	autoAlpha: 0,
-    y: "-=10"
+    y: "+=10"
 	}, 1 );
 
 
@@ -2054,7 +2173,7 @@ else {
 // --------------------------------------------------
 	var tween4 = TweenMax.staggerFrom( $( '#scene4' ), 0.5, { 
     autoAlpha: 0,
-    y: "-=10"
+    y: "+=10"
 	}, 1 );
 
 	var scene4 = new ScrollMagic.Scene({
@@ -2089,7 +2208,7 @@ else {
 // --------------------------------------------------	
 	var tween6 = TweenMax.staggerFrom( $( '#scene6' ), 0.5, { 
     autoAlpha: 0.5,
-    y: "-=10"
+    y: "+=10"
 	}, 1 );
 
 	var scene6 = new ScrollMagic.Scene({
@@ -2103,8 +2222,13 @@ else {
 	.setTween( tween6 )
 	.setClassToggle( "#scene6", "fadeIn" );
 
+
+
 	}
 
+
+
+// ========================================owl
  
   $("#owl-demo").owlCarousel({
  
@@ -2121,6 +2245,23 @@ else {
       // itemsMobile : false
  
   });
+
+  $("#owl-demo8").owlCarousel({
+ 
+      navigation : false, // Show next and prev buttons
+      slideSpeed : 300,
+      paginationSpeed : 400,
+      singleItem:true,
+ 
+      // "singleItem:true" is a shortcut for:
+      items : 3
+      // itemsDesktop : false,
+      // itemsDesktopSmall : false,
+      // itemsTablet: false,
+      // itemsMobile : false
+ 
+  });
+
 
   $("#owl-demo-gift").owlCarousel({
  
@@ -2170,7 +2311,117 @@ else {
       // itemsMobile : false
  
   });
+
+
+
  
+  $("#owl-demo-gift8").owlCarousel({
+ 
+      autoPlay: 3000, 
+ 
+      items : 4,
+      itemsDesktop : [1199,3],
+      itemsDesktopSmall : [979,3]
+ 
+  });
+
+
+  $("#owl-demo-sh8").owlCarousel({
+ 
+      autoPlay: 3000, 
+ 
+      items : 4,
+      itemsDesktop : [1199,3],
+      itemsDesktopSmall : [979,3]
+ 
+  });
+ 
+
+  $("#owl-demo-news8").owlCarousel({
+ 
+      autoPlay: 3000, 
+ 
+      items : 4,
+      itemsDesktop : [1199,3],
+      itemsDesktopSmall : [979,3]
+ 
+  });
+
+
+
+
+
+
+ var owl = $("#owl-demo");		
+
+  $(".pre_btn1").click(function(){
+    owl.trigger('owl.prev');
+  })
+  $(".next_btn1").click(function(){
+    owl.trigger('owl.next');
+  })
+
+
+
+ var owl2 = $("#owl-demo-gift");		
+
+  $(".pre_btn2").click(function(){
+    owl2.trigger('owl.prev');
+  })
+  $(".next_btn2").click(function(){
+    owl2.trigger('owl.next');
+  })
+
+  var owl3 = $("#owl-demo-sh");		
+
+  $(".pre_btn3").click(function(){
+    owl3.trigger('owl.prev');
+  })
+  $(".next_btn3").click(function(){
+    owl3.trigger('owl.next');
+  })
+
+  var owl4 = $("#owl-demo-news");		
+
+  $(".pre_btn4").click(function(){
+    owl4.trigger('owl.prev');
+  })
+  $(".next_btn4").click(function(){
+    owl4.trigger('owl.next');
+  })
+ 
+
+// ===============for_ipad===================
+
+
+ var owl8 = $("#owl-demo8");		
+
+  $(".pre_btn8").click(function(){
+    owl8.trigger('owl.prev');
+  })
+  $(".next_btn8").click(function(){
+    owl8.trigger('owl.next');
+  })
+
+
+
+ var owl28 = $("#owl-demo-gift8");		
+
+  $(".pre_btn28").click(function(){
+    owl28.trigger('owl.prev');
+  })
+  $(".next_btn28").click(function(){
+    owl28.trigger('owl.next');
+  })
+
+  var owl38 = $("#owl-demo-sh8");		
+
+  $(".pre_btn38").click(function(){
+    owl38.trigger('owl.prev');
+  })
+  $(".next_btn38").click(function(){
+    owl38.trigger('owl.next');
+  })
  
 
 

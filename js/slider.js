@@ -15,7 +15,7 @@ function init(){
 
 function resizeSlider(){
 	console.log(window.innerWidth);
-	if(window.innerWidth>=768){
+	if(window.innerWidth >= 768){ /*動態改變SLIDER大小與SVG相符*/
 		var svgPath = document.getElementsByTagName("path")[0];
 	    var pathWidth = svgPath.getBoundingClientRect().width*.63;
 	    var pathHeight = svgPath.getBoundingClientRect().height*.79;
@@ -26,7 +26,33 @@ function resizeSlider(){
 		document.getElementById("sliderBox").style.width = "100%";
 	    document.getElementById("sliderBox").style.height = "100%";
 	}
+
+	if(window.innerWidth < 550){ /*動態變更banner高度*/
+		console.log("slider img height:"+$("#sliderBox .slide img").height());
+		$(".productsBox .banner").css("height",$("#sliderBox .slide img").height());
+	}else if(window.innerWidth >= 550 && window.innerWidth < 768){
+		$(".productsBox .banner").css("height", "350px");
+	}else if(window.innerWidth >=768 && window.innerWidth < 1200){
+		$(".productsBox .banner").css("height", "400px");
+	}else{
+		$(".productsBox .banner").css("height", "550px");
+	}
 	
+	if(window.innerWidth == 768){
+		$("#btnLeft").css("left","11%");
+		$("#btnRight").css("right","11%");
+	}
+	if(window.innerWidth == 970){
+		$("#btnLeft").css("left","17%");
+		$("#btnRight").css("right","17%");
+		$("#sliderBox").css("top", "-12px");
+	}
+	if(window.innerWidth == 1024){
+		$("#btnLeft").css("left","14%");
+		$("#btnRight").css("right","14%");
+		$(".sliderArr").css("top","130px");
+		$("#sliderBox").css("top", "-5px");
+	}
 }
 
 function sliderFunc(){

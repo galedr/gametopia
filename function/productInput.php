@@ -22,8 +22,8 @@ if(isset($_FILES["proImg"]["name"]) && ($_FILES["proImg"]["name"]) != ""){
 	$proImg_name = $_FILES["proImg"]["name"];
 	$proImg_tmp = $_FILES["proImg"]["tmp_name"];
 
-	move_uploaded_file($proImg_tmp, '../images/'.$proImg_name);
-	$proImg = "images/$proImg_name";
+	move_uploaded_file($proImg_tmp, '../images/productPictures/'.$proImg_name);
+	$proImg = "images/productPictures/$proImg_name";
 
 }
 if(isset($_FILES["proPic01"]["name"]) && ($_FILES["proPic01"]["name"]) != ""){
@@ -34,8 +34,8 @@ if(isset($_FILES["proPic01"]["name"]) && ($_FILES["proPic01"]["name"]) != ""){
 	$proPic01_name = $_FILES["proPic01"]["name"];
 	$proPic01_tmp = $_FILES["proPic01"]["tmp_name"];
 
-	move_uploaded_file($proPic01_tmp, '../images/'.$proPic01_name);
-	$proPic01 = "images/$proPic01_name";
+	move_uploaded_file($proPic01_tmp, '../images/productPictures/'.$proPic01_name);
+	$proPic01 = "images/productPictures/$proPic01_name";
 
 }
 if(isset($_FILES["proPic02"]["name"]) && ($_FILES["proPic02"]["name"]) != ""){
@@ -46,8 +46,8 @@ if(isset($_FILES["proPic02"]["name"]) && ($_FILES["proPic02"]["name"]) != ""){
 	$proPic02_name = $_FILES["proPic02"]["name"];
 	$proPic02_tmp = $_FILES["proPic02"]["tmp_name"];
 
-	move_uploaded_file($proPic02_tmp, '../images/'.$proPic02_name);
-	$proPic02 = "images/$proPic01_name";
+	move_uploaded_file($proPic02_tmp, '../images/productPictures/'.$proPic02_name);
+	$proPic02 = "images/productPictures/$proPic02_name";
 	
 }
 if(isset($_FILES["proPic03"]["name"]) && ($_FILES["proPic03"]["name"]) != ""){
@@ -58,8 +58,8 @@ if(isset($_FILES["proPic03"]["name"]) && ($_FILES["proPic03"]["name"]) != ""){
 	$proPic03_name = $_FILES["proPic03"]["name"];
 	$proPic03_tmp = $_FILES["proPic03"]["tmp_name"];
 
-	move_uploaded_file($proPic03_tmp, '../images/'.$proPic03_name);
-	$proPic03 = "images/$proPic01_name";
+	move_uploaded_file($proPic03_tmp, '../images/productPictures/'.$proPic03_name);
+	$proPic03 = "images/productPictures/$proPic03_name";
 	
 }
 if(isset($_POST["proPrice"]) && ($_POST["proPrice"]) != ""){

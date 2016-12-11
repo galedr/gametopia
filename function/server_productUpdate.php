@@ -6,6 +6,20 @@ error_reporting(E_ALL || ~E_NOTICE);
 $url = $_SERVER['HTTP_REFERER'];
 
 
+if(isset($_POST['deleteProId']) && ($_POST['deleteProId']) != ''){
+	if(isset($_POST['delete']) && ($_POST['delete']) == 'true'){
+
+		$deleteProId = $_POST['deleteProId'];
+
+		$deleteQuery = "DELETE FROM products WHERE proId = '$deleteProId'";
+
+		$deleteRec = $pdo->query($deleteQuery);
+
+		header("location: $url");
+	}
+}
+
+
 if(isset($_POST["proId"]) && ($_POST["proId"]) != ''){ 
 	$proId = $_POST["proId"];
 }
@@ -30,6 +44,26 @@ if(isset($_POST["proInfo"]) && ($_POST["proInfo"]) != ''){
 	$proInfoUpdateRec = $pdo->prepare($proInfoUpdateQuery);
 	$proInfoUpdateRec->bindValue(":proInfo",$proInfo);
 	$proInfoUpdateRec->execute();
+
+}
+
+if(isset($_POST["proSeries"]) && ($_POST["proSeries"]) != ''){
+	$proSeries = nl2br($_POST["proSeries"]);
+
+	$proSeriesUpdateQuery = "UPDATE products SET proSeries = :proSeries WHERE proId = '$proId'";
+	$proSeriesUpdateRec = $pdo->prepare($proSeriesUpdateQuery);
+	$proSeriesUpdateRec->bindValue(":proSeries",$proSeries);
+	$proSeriesUpdateRec->execute();
+
+}
+
+if(isset($_POST["proClass"]) && ($_POST["proClass"]) != ''){
+	$proClass = nl2br($_POST["proClass"]);
+
+	$proClassUpdateQuery = "UPDATE products SET proClass = :proClass WHERE proId = '$proId'";
+	$proClassUpdateRec = $pdo->prepare($proClassUpdateQuery);
+	$proClassUpdateRec->bindValue(":proClass",$proClass);
+	$proClassUpdateRec->execute();
 
 }
 
@@ -62,8 +96,8 @@ if(isset($_FILES['proImg']['name']) && ($_FILES['proImg']['name']) != ''){
 	$proImg_name = $_FILES["proImg"]["name"];
 	$proImg_tmp = $_FILES["proImg"]["tmp_name"];
 
-	move_uploaded_file($proImg_tmp, '../images/'.$proImg_name);
-	$proImg = "images/$proImg_name";
+	move_uploaded_file($proImg_tmp, '../images/productPictures/'.$proImg_name);
+	$proImg = "images/productPictures/$proImg_name";
 
 	$proImgUpdateQuery = "UPDATE products SET proImg = '$proImg' WHERE proId = '$proId'";
 	$proImgUpdateRec = $pdo->query($proImgUpdateQuery);
@@ -79,8 +113,8 @@ if(isset($_FILES["proPic01"]["name"]) && ($_FILES["proPic01"]["name"]) != ""){
 	$proPic01_name = $_FILES["proPic01"]["name"];
 	$proPic01_tmp = $_FILES["proPic01"]["tmp_name"];
 
-	move_uploaded_file($proPic01_tmp, '../images/'.$proPic01_name);
-	$proPic01 = "images/$proPic01_name";
+	move_uploaded_file($proPic01_tmp, '../images/productPictures/'.$proPic01_name);
+	$proPic01 = "images/productPictures/$proPic01_name";
 
 	$proPic01UpdateQuery = "UPDATE products SET proPic01 = '$proPic01' WHERE proId = '$proId'";
 	$proPic01UpdateRec = $pdo->query($proPic01UpdateQuery);
@@ -94,8 +128,8 @@ if(isset($_FILES["proPic02"]["name"]) && ($_FILES["proPic02"]["name"]) != ""){
 	$proPic02_name = $_FILES["proPic02"]["name"];
 	$proPic02_tmp = $_FILES["proPic02"]["tmp_name"];
 
-	move_uploaded_file($proPic02_tmp, '../images/'.$proPic02_name);
-	$proPic02 = "images/$proPic02_name";
+	move_uploaded_file($proPic02_tmp, '../images/productPictures/'.$proPic02_name);
+	$proPic02 = "images/productPictures/$proPic02_name";
 
 	$proPic02UpdateQuery = "UPDATE products SET proPic02 = '$proPic02' WHERE proId = '$proId'";
 	$proPic02UpdateRec = $pdo->query($proPic02UpdateQuery);
@@ -109,8 +143,8 @@ if(isset($_FILES["proPic03"]["name"]) && ($_FILES["proPic03"]["name"]) != ""){
 	$proPic03_name = $_FILES["proPic03"]["name"];
 	$proPic03_tmp = $_FILES["proPic03"]["tmp_name"];
 
-	move_uploaded_file($proPic03_tmp, '../images/'.$proPic03_name);
-	$proPic03 = "images/$proPic03_name";
+	move_uploaded_file($proPic03_tmp, '../images/productPictures/'.$proPic03_name);
+	$proPic03 = "images/productPictures/$proPic03_name";
 
 	$proPic03UpdateQuery = "UPDATE products SET proPic03 = '$proPic03' WHERE proId = '$proId'";
 	$proPic03UpdateRec = $pdo->query($proPic03UpdateQuery);

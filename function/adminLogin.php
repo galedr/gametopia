@@ -9,9 +9,14 @@ if(!isset($_SESSION["GTopiaAdmin"])){
 		$adminAccount = $_POST["adminAccount"];
 		$adminPassword = $_POST["adminPassword"];
 
+		
+
 		$adminQuery = "SELECT * FROM admin WHERE adminAccount = '$adminAccount'";
+		
 		$adminRec = $pdo->query($adminQuery);
 		$adminRow = $adminRec->fetch(PDO::FETCH_ASSOC);
+
+		
 
 		if($adminAccount == $adminRow["adminAccount"] && $adminPassword == $adminRow["adminPassword"]){
 
@@ -19,7 +24,7 @@ if(!isset($_SESSION["GTopiaAdmin"])){
 
 			echo "
 					<script>
-						location.href='../server_product.php';
+						location.href='../server_index.php';
 					</script>
 				 ";
 

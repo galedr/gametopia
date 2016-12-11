@@ -54,19 +54,19 @@ if($(window).width() > 1200) {
 }		
 
 
-	// $("button.optionBar").sparkle();
-	// $(".container").sparkle();
+	$("button.optionBar").sparkle();
+	$(".container").sparkle();
 
 
 
-	// if ("<?php echo $memAccount?>"== "") {
-	// 	$('#toUsedPost').removeAttr('form');
-	// 	$('#toUsedPost').click(function(){
-	// 		alert("請先登入會員");
-	// 	});
-	// }else{
-	// 	$('#toUsedPost').attr('form', "SH_search");
-	// }
+	if ("<?php echo $memAccount?>"== "") {
+		$('#toUsedPost').removeAttr('form');
+		$('#toUsedPost').click(function(){
+			alert("請先登入會員");
+		});
+	}else{
+		$('#toUsedPost').attr('form', "SH_search");
+	}
 
 }
 

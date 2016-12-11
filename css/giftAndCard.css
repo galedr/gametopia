@@ -259,7 +259,7 @@ overflow: hidden;
   box-sizing: border-box;
 }
 #diamond{
-  width: 10%;
+  width: 8%;
   height: auto;
   float: left;
   margin-left: 45px;
@@ -548,7 +548,7 @@ margin-top: 15px;
 }
 .resultTitle{
   font-size: 24px;
-  /*font-weight: bold;*/
+  font-weight: bold;
   color: #f1f1f1;
   line-height: 1.5em; 
   background-color: rgba(110, 190, 142, 0.9);
@@ -600,12 +600,31 @@ height: 170px;
   width: 60px;
   margin: 2px auto;
   color:#fff;
+  letter-spacing: 1px;
   background-color:#80aab5;
   font-size: 13px;
   border-radius: 5px;
   line-height: 1.5rem;
   padding:0px 6px;  
   text-align: center;
+}
+.proRecommend .proRow .singleProBox .catName{
+  color:#555;
+  width: 80px;
+  margin: 5px auto;
+  font-size: 13px;
+  line-height: 1.5rem;
+  text-align: center;
+  font-weight: bold;
+  letter-spacing: 1px;
+  border-bottom: 3px solid #96CC58;
+}
+.proRecommend .catName i{
+  color:#96CC58;
+}
+.proRecommend .proRow{
+  text-align: center;
+  font-size: 0;
 }
 .proRecommend .proRow .singlePro{
   display: inline-block;
@@ -652,7 +671,23 @@ height: 170px;
   float: left;
   padding-top: 3px;
 }
+/*==========================Global Tags 共用標籤樣式=====================================*/
 
+.proRecommend div.tagPS{
+  background-color: #0072BC;
+}
+
+.proRecommend div.tag3DS{
+  background-color: #C05459;
+}
+
+.proRecommend div.tagXBOX{
+  background-color: #7CC576;
+}
+
+.proRecommend div.tagPC{
+  background-color: #A865A8;
+}
 /*=================頁面版面結束=====================*/
 
 
@@ -689,7 +724,7 @@ height: 170px;
     height: auto;
   }
   .question{
-    width: 72%;
+    width: 79%;
     height: auto;
   }
   .question p{
@@ -934,7 +969,7 @@ height: 170px;
   }
   .arrowInstruction{
     font-size: 16px;
-    padding-top: 25px;
+    padding-top: 5px;
     /*margin-left: 10px;*/
   }
   .arrowInstruction > p{
@@ -945,7 +980,9 @@ height: 170px;
     height: auto;
   }
   .proRecommend h5{
+    color: #2F4979;
     font-size: 12px;
+    line-height: 1.5em;
   }
   .proRecommend [class^="tag"]{
     width: 50px;
@@ -1327,6 +1364,10 @@ height: 170px;
   .proRecommend .proRow .singlePro{
     width: 22%;
   }
+  .page1Content{
+    height: 100%;
+    padding-top: 30px;
+  }
 }
 
 /*=======================平板橫式RWD設定結束=================*/
@@ -1338,8 +1379,8 @@ height: 170px;
     width: 100%;
   }
   .page1Text{
-    padding-top: 10px;
-    padding-bottom: 15px;
+    padding-top: 15px;
+    padding-bottom: 20px;
   }
   #page_container5{
     margin-top: 25px;
@@ -1378,7 +1419,7 @@ height: 170px;
     width: 100%;
   }
   .options2{
-    padding-top: 80px;
+    padding-top: 100px;
     width: 100%;
   }
   .proTitle{
@@ -1388,7 +1429,7 @@ height: 170px;
     margin: 10px 70px;
   }
   #expStep{
-    padding-top: 10px;
+    padding-top: 5px;
   }
   .stepDescribe{
     padding: 10px 6px;
@@ -1424,6 +1465,10 @@ height: 170px;
   }
   .proRecommend .proRow .singlePro{
     width: 24%;
+  }
+  .page1Content{
+    height: 100%;
+    padding-top: 20px;
   }
 }
 /*===================桌機RWD設定結束===================*/

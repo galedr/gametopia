@@ -1,0 +1,98 @@
+*{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	font-family:"微軟正黑體", sans-serif;
+}
+
+.indexList{
+	background-color: #3C3C3C;
+	position: fixed;
+	left: 0;
+	top: 0;
+	height: 100%;
+	padding:3% 2% 0%;
+}
+
+/*商品管理*/
+.tab_container{
+	/*background-color: pink;*/
+	height: 100vh;
+}
+.logo{
+	width: 100%;
+}
+.pageList{
+	padding-top: 20%;
+}
+table{
+	background-color: white;
+}
+table tr{
+	border-bottom: 1px solid #9D9D9D;
+}
+table tr td{
+	text-align: center;
+	vertical-align: middle;
+	padding: 10px;
+}
+.productRow{
+	text-align: center;
+	background-color: white;
+}
+.proImg{
+	display: inline-block;
+	width: 100%;
+	height: 100%;
+	max-width: 40px;
+	max-height: 40px;
+}
+
+/*訂單管理*/
+#tab_orderManager{
+	display: none;
+}
+.orderlistRow{
+	text-align: center;
+	background-color: white;
+}
+#newsInfoHolder tr{
+	height: 35px;
+}
+.detailImg{
+	width: 100%;
+	height: 100%;
+	max-height: 30px;
+	max-width: 30px;
+	position: relative;
+	left: 35%;
+}
+
+/*新聞管理*/
+#tab_newsManager{
+	display: none;
+}
+.newsInfoRow{
+	text-align: center;
+	background-color: white;
+}
+
+/*檢舉管理*/
+#tab_reportManager{
+	display: none;
+}
+#comReportRow{
+	background-color: white;
+	text-align: center;
+}
+#comReportHolder{
+	text-align: center;
+}
+#comReportHolder caption{
+	font-size: 24px;
+	text-align: center;
+}
+#replyReportHolder caption{
+	font-size: 24px;
+	text-align: center;
+}

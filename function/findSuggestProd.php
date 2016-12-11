@@ -1,3 +1,12 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+<script src="../js/tagName.js"></script>
+</head>
+</html>
+
 <?php
 
 	// echo "<div class='singlePro'>
@@ -56,10 +65,10 @@
 			$result= $pdo->query($sql_1);
 	
 			$num= $result->rowCount();
-			if ($num>=8) {
-				$num= 8;
+			if ($num>=4) {
+				$num= 4;
 			}else{
-				$sql_2= "SELECT * FROM products WHERE proClass!='". $category. "' limit 0,". ( 8- $num );
+				$sql_2= "SELECT * FROM products WHERE proClass!='". $category. "' limit 0,". ( 4- $num );
 			}
 			while ($resultRow= $result->fetch(PDO::FETCH_ASSOC) && $num>0){
 				$proId = $resultRow['proId'];
@@ -68,9 +77,9 @@
 			              <div class='singleProBox'>
 			                <img src='".$resultRow["proImg"]."'>                
 			                <h5>".$resultRow["proName"]."</h5>
-			                <div class='tag'>".$resultRow["proSeries"]."</div>
-			                <div class='tag'>".$resultRow["proClass"]."</div>
-			                <p class='price'>NTD$".$resultRow["proPrice"]."</p>
+			                <div class='tagName'>".$resultRow["proSeries"]."</div>
+			                <div class='catName'><i class='catTarget'></i>".$resultRow["proClass"]."</div>
+			                <p class='price'>NT$".$resultRow["proPrice"]."</p>
 			              </div>
 			            </div>";
 
@@ -87,9 +96,9 @@
 				              <div class='singleProBox'>
 				                <img src='".$resultRow["proImg"]."'>                
 				                <h5>".$resultRow["proName"]."</h5>
-				                <div class='tag'>".$resultRow["proSeries"]."</div>
-				                <div class='tag'>".$resultRow["proClass"]."</div>
-				                <p class='price'>NTD$".$resultRow["proPrice"]."</p>
+				                <div class='tagName'>".$resultRow["proSeries"]."</div>
+				                <div class='catName'><i class='catTarget'></i>".$resultRow["proClass"]."</div>
+				                <p class='price'>NT$".$resultRow["proPrice"]."</p>
 				              </div>
 				            </div>";
 				}

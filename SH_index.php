@@ -76,3 +76,17 @@ if(isset($_SESSION["GTopiaAccount"]) && ($_SESSION['GTopiaAccount']) != ""){
 </body>
 
 </html>
+
+<script type="text/javascript">
+	var k= '<?php echo $memAccount;?>';
+	console.log(k);
+	if (k== "") {
+		$('#toUsedPost').removeAttr('form');
+		console.log("我在這~~~");
+		$('#toUsedPost').click(function(){
+			alert("請先登入會員");
+		});
+	}else{
+		$('#toUsedPost').attr('form', "usedProdPost");
+	}
+</script>

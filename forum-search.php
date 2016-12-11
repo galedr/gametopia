@@ -44,11 +44,7 @@
 					echo $platString;
 					break;
 				case '3DS':
-					$platString = "HANDHELD";
-					echo $platString;
-					break;
-				case 'mobile':
-					$platString = "MOBILE";
+					$platString = "3DS";
 					echo $platString;
 					break;
 				case 'Wii':
@@ -70,11 +66,8 @@
 				case 'PC':
 					echo "images/pc.png";
 					break;
-				case '掌機':
+				case '3DS':
 					echo "images/n3ds.png";
-					break;
-				case 'mobile':
-					echo "images/iphonese.png";
 					break;
 				case 'Wii':
 					echo "images/wii_console.png";
@@ -115,17 +108,16 @@
 				<form action="function/forumAddArticle.php" method="post" id="form_Post">
 					<div class="platNcat">
 						<select name="platform" id="platform">
-							<option value="default" selected>平台</option>
+							<option value="default">平台</option>
 							<option value="PS4">PS</option>
 							<option value="XBOX">XBOX</option>
 							<option value="PC">PC</option>
 							<option value="Wii">Wii</option>
 							<option value="3DS">3DS</option>
-							<!-- <option value="mobile">手機</option> -->
 						</select>
 						<select name="category" id="postCategory">
 							<option value="default">分類</option>
-							<option value="notice">公告</option> <!-- 要偵測是否為管理員 -->
+							<!-- <option value="notice">公告</option> -->
 							<option value="chat">閒聊</option>
 							<option value="review">心得</option>
 							<option value="guide">攻略</option>

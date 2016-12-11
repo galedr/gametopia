@@ -35,7 +35,10 @@ $memAccount = $_SESSION["GTopiaAccount"];
 			<input type="radio" name="readIf" id="unRead" checked>
 
 			<ul class="top">
-				<li><label for="unRead" id="R2">未讀信息<span class="unReadCount"></span></label></li>
+				<li>
+					<label for="unRead" id="R2">未讀信息<span class="unReadCount"></span></label>
+					<img src="images/write.png" id="writeNewMessageOnCellPhone">
+				</li>
 			</ul>
 			<div class="mailList" id="mailList_2">
 				<div id="dv_scroll_bar_2" class="dv_scroll_bar">  

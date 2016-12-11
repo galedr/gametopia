@@ -92,13 +92,14 @@
 */
 	.header-meun-all > li > a{
 		text-decoration: none;
-		padding: 20px 20px 20px 10px;
+		padding: 20px 20px 25px 10px;
 		color: #385F7A;
 		font-size:1rem ;
 		letter-spacing:0.25rem; 
 		font-weight: 500;
 		position:relative; 
 		/*outline: 1px solid red;*/
+		z-index: 900;
 	}		
 
 	.header-meun-all>li a:after{
@@ -300,26 +301,82 @@
 	/*＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝*/
 	#sh-li ul,#fo-li ul{
 		position: absolute; 
-		top: 50px; 
 		width: 100%; 
-		background-color:rgba(88,169,147,0.5); 
+		background-color:rgba(153,225,223,0.9); 
 		font-size: 1rem;
-		transition: .5s;
 		opacity: 0;
 	}
 
 
-
 	#sh-li ul li a,#fo-li ul li a{
 		display: block;
-		color:#333;
+		color: #385F7A;
 		letter-spacing:1px; 
+		text-decoration: none;
 		/*background-color: #fa0;*/
+	}
+	#sh-li ul li,#fo-li ul li{
+		border-color:  rgba(132, 152, 127, 0.4);
+		border-style: solid;
+		border-bottom-style: dotted;
+		border-top: none;
+
+		/*border-top: 1px solid rgba(33, 44, 83, 0.6);*/
+    	border-width: 1px;
+
+	}
+	#sh-li ul li:first-child,#fo-li ul li:first-child{
+		border-top: 1px solid  rgba(132, 152, 127, 0.8);
+	}
+	#sh-li ul li:last-child,#fo-li ul li:last-child{
+		border-bottom: 1px solid  rgba(132, 152, 127, 0.8);
 	}
 	#sh-li ul{top:-200px;}
 	#fo-li ul{top:-300px;}
-	#sh-li:hover ul{opacity:1;top: 50px;}
-	#fo-li:hover ul{opacity:1;top: 50px;}
+	#sh-li:hover ul{
+		animation: go 0.5s  0s  forwards;
+	}
+	#fo-li:hover ul{
+		animation: gox 0.5s  0s forwards ;
+	}
+	
+	.header-meun #sh-li ul li a:hover,.header-meun #fo-li ul li a:hover{
+		
+		background-color:rgba(75, 120, 133, 0.6); 
+		transition: 0.35s;
+		color: #fff;
+	}
+
+
+	@keyframes go{
+		0%{
+			top: -200px;
+			opacity: 0;
+		}
+		60%{
+			top: 40;
+			opacity: 0.05;
+		}
+		100%{
+			top:60px;
+			opacity:1;
+		}
+	}
+	
+	@keyframes gox{
+		0%{
+			top: -300px;
+			opacity: 0;
+		}
+		60%{
+			top: 40;
+			opacity: 0.05;
+		}
+		100%{
+			top:60px;
+			opacity:1;
+		}
+	}
 	/*=================header個別變化========================*/
 	.sm .sm-pin{opacity:1;} /*商城*/
 	.gb .gb-pin{opacity:1;} /*送禮*/

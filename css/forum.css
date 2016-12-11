@@ -9,6 +9,7 @@ button{ cursor: pointer; }
 body{
   background: url(../images/pageForum.png) no-repeat center center;
   background-attachment: fixed;
+  background-size: cover;
 }		
 /*==============================上方BANNER=================================*/
 .banner{

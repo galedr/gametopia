@@ -11,6 +11,7 @@ body{
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
+  background-size: cover;
 }
 div[class^="col_"] {
   float: left;
@@ -226,6 +227,12 @@ label {cursor: pointer;}
     background-color: #7CC576;
 
   }
+  .step table tr .fa-stack-2x {
+    color: white;
+    width: 60px;
+    position: relative;
+    left: 0;
+  }
 
 p #memName {
   display: inline-block;
@@ -274,7 +281,7 @@ p #memName {
 .cartList .listItem {
   padding-top: 2%;
   padding-bottom: 4%; }
-.cartList .listItem + .listItem {
+.cartList .listItem {
   border-top: 1px dashed #ddd; }
 /*.cartList>.listItem:nth-of-type(1) {
   border-top: none;
@@ -463,6 +470,17 @@ p #memName {
 .prodSuggest .prodSuggestItem {
   padding: 0% 2%;
   box-sizing: border-box; }
+@media all and (min-width: 992px) {
+  #aa7, #aa8{
+    display: block;
+  }
+}
+@media all and (max-width: 991px) {
+  #aa7, #aa8{
+    display: none;
+  }
+}
+
   .prodSuggest .prodSuggestItem .itemBox {
     padding: 15px 0;
     margin: 10px 0;
@@ -471,8 +489,8 @@ p #memName {
     transition: 0.35s;
     text-align: center;
     cursor: pointer; }
-  .prodSuggest .prodSuggestItem .itemBox {
-    box-shadow: rgba(255, 167, 0, 0.2); }
+  .prodSuggest .prodSuggestItem .itemBox:hover {
+    background-color: rgba(255, 167, 0, 0.2); }
   .prodSuggest .prodSuggestItem .itemBox img {
     display: block;
     width: 85%;
@@ -484,6 +502,9 @@ p #memName {
     color: #2F4979;
     font-size: 20px;
     line-height: 1.5em; }
+  @media all and (max-width: 767px) {
+    .prodSuggest .prodSuggestItem .itemBox h5 {
+      font-size: 13px; } }
   .prodSuggest .prodSuggestItem .itemBox [class^="tag"] {
     width: 60px;
     margin: 5px auto;
@@ -510,7 +531,7 @@ p #memName {
     line-height: 1rem; }
   .prodSuggest .prodSuggestItem .addCart {
     margin-top: 5%;
-    text-align: right; }
+    text-align: center; }
     .prodSuggest .prodSuggestItem .addCart button {
       cursor: pointer;
       color: #eee;
@@ -526,9 +547,21 @@ p #memName {
       text-decoration: none; }
   .cutClear {
     display: none; }
+  @media all and (min-width: 992px) {
+    .prodSuggest div:nth-of-type(9) {
+      display: block; }
+    #cutThree {
+      display: none; } }
+  @media all and (max-width: 991px) {
+    .prodSuggest div:nth-of-type(9) {
+      display: none; }
+    #cutThree {
+      display: block; } }
   @media all and (max-width: 767px) {
     .cutClear {
-      display: block; } }
+      display: block; }
+    #cutThree {
+      display: none; } }
 .prodSuggest .title {
   display: block;
   font-size:1rem;
@@ -594,8 +627,10 @@ p #memName {
 
 
 .card_content{
-  padding:10px 20px;
+  padding: 0 20px;
   box-sizing: border-box; 
+  overflow: auto;
+  /*overflow-y: hidden;*/
 }
 
 /*我好嗨阿~~~*/

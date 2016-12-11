@@ -1,4 +1,5 @@
 <?php
+error_reporting(E_ALL || ~E_NOTICE);
 require_once("connectSQL.php");
 
 if(isset($_POST["memAccount"]) && ($_POST["memAccount"]) != ""){
@@ -42,6 +43,7 @@ $regMemRec->execute();
 
 echo "
 	<script>
+		alert('恭喜您已成功註冊');
 		history.go(-1);
 	</script>
 ";

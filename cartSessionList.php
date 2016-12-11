@@ -16,8 +16,8 @@ error_reporting(E_ALL || ~E_NOTICE);
 	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
 
 	<script src="js/tagName.js"></script>
-	<script src="script/cartList.js"></script>
 	<script type="text/javascript" src="js/jquery-3.1.0.min.js"></script>
+	<script src="script/cartList.js"></script>
 </head>
 <body>
 	<?php
@@ -43,7 +43,7 @@ error_reporting(E_ALL || ~E_NOTICE);
 					<td><span></span></td>
 					<td>3</td>
 					<td><span></span></td>
-					<td><img src="../date1113/images/cartFlag.png"></td>
+					<td><i class="fa fa-flag fa-stack-2x"></i></td>
 				</tr>
 			</table>
 		</div>
@@ -83,20 +83,20 @@ error_reporting(E_ALL || ~E_NOTICE);
 				
 							</div>
 
-							<div class="col_xs_6 col_sm_6 col_md_6 card_content">
+							<div class="col_xs_6 col_sm_6 col_md_6 card_content" id="card_content">
 								<?php echo $_SESSION['card']['cardInfo']; ?>
 							</div>	
 
-							<div class="col_xs_2 col_sm_2 col_md_2 checkBlock">
+							<div class="col_xs_3 col_sm_3 col_md_3 checkBlock">
 								<div class="remove">
 									<a href="function/sessionCartRemove.php?cardDelete=true">
 										<span>&times</span><span>移除</span>
 									</a>
 								</div>
 							</div>	
+							<div class="clearfix"></div>
 						</div>
 
-						<div class="clearfix"></div>
 
 			 	<?php } ?>
 
@@ -198,7 +198,7 @@ error_reporting(E_ALL || ~E_NOTICE);
 			</div>
 		</form>
 		<div class="prodSuggest">
-			<div class="col_xs_5 col_sm_3 col_md_2 col_lg_1 title">推薦商品</div>
+			<div class="col_xs_5 col_sm_3 col_md_2 col_lg_2 title">推薦商品</div>
 
 			<div class="clearfix"></div>
 
@@ -220,7 +220,7 @@ error_reporting(E_ALL || ~E_NOTICE);
 					$k++;
 				?>	
 				
-					<div class="col_xs_6 col_sm_4 col_md_4 prodSuggestItem">
+					<div class="col_xs_6 col_sm_4 col_md_3 prodSuggestItem" id="aa<?php echo $k;?>">
 
 						<div class="itemBox" onclick="location.href='productIntro.php?proId=<?php echo $allProRow["proId"]; ?>'">
 							<img src="<?php echo $allProRow["proImg"]; ?>">
@@ -247,6 +247,10 @@ error_reporting(E_ALL || ~E_NOTICE);
 					if($k%2== 0){
 						?>
 						<div class="clearfix cutClear"></div>
+						<?php
+					}else if($k == 3){
+						?>
+						<div class="clearfix" id="cutThree"></div>
 						<?php
 					}
 				}
@@ -287,30 +291,41 @@ error_reporting(E_ALL || ~E_NOTICE);
 						// echo $recomQuery;
 						$recomRec = $pdo->query($recomQuery);
 						while($recomRow = $recomRec->fetch(PDO::FETCH_ASSOC)){
+							$k++;
 				
 			?>
-					<div class="col_xs_6 col_sm_4 col_md_3 prodSuggestItem">
-						<img src="<?php echo $recomRow["proImg"]; ?>" class="col_xs_12 col_sm_12">
-						<div class="price">
-							<div class="original">
-								<span id="original"><?php echo $recomRow["proName"]; ?></span>
-							</div>
-							<div class="special">
-								NT$<span id="special"><?php echo $recomRow["proPrice"]; ?></span>
-							</div>
+					<div class="col_xs_6 col_sm_4 col_md_3 prodSuggestItem" id="aa<?php echo $k;?>">
+						<div class="itemBox" onclick="location.href='productIntro.php?proId=<?php echo $recomRow["proId"]; ?>'">
+							<img src="<?php echo $recomRow["proImg"]; ?>">
+							<h5><?php echo $recomRow["proName"]; ?></h5>
+							<div class="tagName"><?php echo $recomRow["proSeries"]; ?></div>
+							<div class="catName"><i class="catTarget"></i><?php echo $recomRow["proClass"]; ?></div>
+							<p class="price">NT$<?php echo $recomRow["proPrice"]; ?></p>
+
+							<form action="function/sessionCartAdd.php" method="post">
+								<div class="qty">
+									<input type="hidden" name="quantity" value="1">
+									<input type="hidden" name="proId" value="<?php echo $recomRow["proId"]; ?>">
+								</div>
+								<div class="addCart">
+									<button type="submit">加入購物車</button>
+								</div>
+							</form>
 						</div>
-						<form action="function/sessionCartAdd.php" method="post">
-							<div class="qty">
-								<input type="hidden" name="quantity" value="1">
-								<input type="hidden" name="proId" value="<?php echo $recomRow["proId"]; ?>">
-							</div>
-							<div class="addCart">
-								<button type="submit">加入購物車</button>
-							</div>
-						</form>
 					</div>
 
-				<?php } ?>
+				<?php 
+
+					if($k%2== 0){
+						?>
+						<div class="clearfix cutClear"></div>
+						<?php
+					}else if($k == 3){
+						?>
+						<div class="clearfix" id="cutThree"></div>
+						<?php
+					}
+				} ?>
 				<div class="clearfix"></div>
 			<?php } ?>
 
