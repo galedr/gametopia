@@ -2726,6 +2726,9 @@
         #index-container3{display: none !important;}
   		#lx .layer-img{padding-bottom:8%; }
 		/*.layer-scene{width:100vh; height: 100vw;}*/
+		.m-layer-scene{
+			height: 110vh;
+		}
 		.layer-scene > p{font-size: 2rem;}
 		#l6 .layer-img{
 			width:80vw; 
